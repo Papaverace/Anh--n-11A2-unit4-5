@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ôn tập Unit 4 & 5</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: Y2K đầu những năm 2000 – vui, lấp lánh, bóng bẩy, đậm chất "cyber"
+   IDEA: màn hình máy tính năm 2000 – cửa sổ Windows, nút gel, chữ chrome, lưới neon
+   PICTURE: quả địa cầu chrome xanh bóng với vòng quỹ đạo 10 chấm ASEAN, ngôi sao lấp lánh và nhiệt kế
+   COLOUR and TYPE: xanh điện #1d47ff chủ đạo, xanh baby #bfe0ff hỗ trợ, hồng neon #ff3fbf nhấn; Baloo 2 + Be Vietnam Pro
+   LAYOUT: mỗi khối là một "cửa sổ" có thanh tiêu đề; nút dạng viên gel; dải chữ chạy ở trang chủ */
+:root{--ld0:#dcebff;--ld1:rgba(29,71,255,.10);--ld2:#f7fbff;--ld3:#071552;--ld4:#3f4f8f;--ld5:#1233c9;--ld6:#0a238f;--ld7:#d4e8ff;--ld8:#0a238f;--ld9:#0a8a4a;--ld10:#d21f5f;--ld11:rgba(255,63,191,.18);--ld12:rgba(94,224,255,.35);--ld13:#ffc2ec;--ld14:rgba(10,35,143,.15);--ld15:#b9cdf5;--ld16:#eef5ff;--ld17:#eaf2ff;--ld18:#d8fbe9;--ld19:#ffe0ee;--ld20:#b9cdf5;--ld21:#ffb6ec;--ld22:#fff0fa;--ld23:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--ld0:#050a2b;--ld1:rgba(94,224,255,.12);--ld2:#0b1650;--ld3:#eaf3ff;--ld4:#a9bdf5;--ld5:#7fb2ff;--ld6:#000;--ld7:#16297a;--ld8:#5d7bff;--ld9:#4cf09b;--ld10:#ff7ab0;--ld11:rgba(255,63,191,.16);--ld12:rgba(94,224,255,.12);--ld13:#7a1458;--ld14:rgba(0,0,0,.4);--ld15:#24398f;--ld16:#0e1d60;--ld17:#14246d;--ld18:#0b3a26;--ld19:#3d0f25;--ld20:#2a3f99;--ld21:#a3237a;--ld22:#2a0d2c;--ld23:#0e1d60}}
+:root[data-theme=dark]{--ld0:#050a2b;--ld1:rgba(94,224,255,.12);--ld2:#0b1650;--ld3:#eaf3ff;--ld4:#a9bdf5;--ld5:#7fb2ff;--ld6:#000;--ld7:#16297a;--ld8:#5d7bff;--ld9:#4cf09b;--ld10:#ff7ab0;--ld11:rgba(255,63,191,.16);--ld12:rgba(94,224,255,.12);--ld13:#7a1458;--ld14:rgba(0,0,0,.4);--ld15:#24398f;--ld16:#0e1d60;--ld17:#14246d;--ld18:#0b3a26;--ld19:#3d0f25;--ld20:#2a3f99;--ld21:#a3237a;--ld22:#2a0d2c;--ld23:#0e1d60}
+:root{color-scheme:light dark;
+--bg:var(--ld0);--grid:var(--ld1);
+--card:var(--ld2);--ink:var(--ld3);--mute:var(--ld4);
+--blue:#1d47ff;--blue2:var(--ld5);--deep:var(--ld6);--sky:var(--ld7);--line:var(--ld8);
+--acc:#ff3fbf;--cyan:#5ee0ff;--ok:var(--ld9);--bad:var(--ld10);
+--chrome:linear-gradient(180deg,#ffffff 0%,#dfe7f5 38%,#8e9bb8 50%,#e9effa 62%,#ffffff 100%);
+--holo:linear-gradient(110deg,#a8f0ff,#c9b6ff 35%,#ffb6ec 60%,#b6fff0 90%);
+--gel:linear-gradient(180deg,#7fa2ff 0%,#2f5bff 48%,#1d47ff 52%,#4f7bff 100%);
+--sh:5px 5px 0 var(--line)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+[hidden]{display:none!important}
+html{scroll-padding-top:90px}
+body{margin:0;color:var(--ink);font:16px/1.55 "Be Vietnam Pro",system-ui,sans-serif;overflow-x:clip;
+background:radial-gradient(60vw 40vw at 90% 10%,var(--ld11),transparent 60%),radial-gradient(50vw 40vw at 0% 80%,var(--ld12),transparent 60%),
+linear-gradient(var(--grid) 1px,transparent 1px) 0 0/32px 32px,linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/32px 32px,var(--bg);background-attachment:fixed}
+h1,h2,h3{line-height:1.05;text-wrap:balance;margin:0 0 .4em;font-family:"Baloo 2","Be Vietnam Pro",sans-serif}
+h1{font-size:clamp(36px,5.4vw,58px);font-weight:800;background:var(--chrome);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 #0a238f) drop-shadow(0 0 18px rgba(94,224,255,.55))}
+h2{font-size:clamp(28px,3.6vw,38px);font-weight:800;color:var(--blue2);text-shadow:3px 3px 0 var(--ld13)}
+h3{font-size:20px;font-weight:800}
+p{margin:0 0 .8em}
+button{font:inherit;cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible,a:focus-visible{outline:3px dashed var(--acc);outline-offset:3px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 max(4vw,16px)}
+header{background:var(--gel);color:#fff;position:sticky;top:0;z-index:20;border-bottom:3px solid #0a238f;box-shadow:inset 0 2px 0 rgba(255,255,255,.55),0 4px 0 rgba(10,35,143,.25)}
+header .wrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding-block:10px}
+.logo{font:800 22px "Baloo 2",sans-serif;display:flex;align-items:center;gap:10px;margin-inline-end:auto;color:#fff;text-decoration:none;text-shadow:2px 2px 0 #0a238f}
+.logo span{font:600 13px "Be Vietnam Pro",sans-serif;background:var(--holo);color:#0a238f;padding:2px 10px;border-radius:999px;text-shadow:none;border:2px solid #0a238f}
+nav{display:flex;gap:6px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;padding:8px 16px;border-radius:999px;font-weight:700;font-size:15px;min-height:44px;display:flex;align-items:center;border:2px solid transparent;text-shadow:1px 1px 0 #0a238f}
+nav a:hover{border-color:rgba(255,255,255,.7);background:rgba(255,255,255,.12)}
+nav a.on{background:var(--chrome);color:#0a238f;border-color:#0a238f;text-shadow:none;box-shadow:inset 0 -2px 0 rgba(10,35,143,.25)}
+.ticker{background:var(--acc);color:#fff;border-bottom:3px solid #0a238f;overflow:hidden;white-space:nowrap;font:700 15px "Baloo 2",sans-serif;letter-spacing:.02em}
+.ticker div{display:inline-block;padding:6px 0;animation:tk 28s linear infinite}
+@keyframes tk{to{transform:translateX(-50%)}}
+.view{display:none;padding-block:clamp(24px,4vw,48px)}.view.on{display:block}#v-home{padding-top:0}
+.hero{color:#fff;padding-block:clamp(24px,3vw,40px) clamp(32px,4vw,60px);border-bottom:3px solid #0a238f;
+background:radial-gradient(40% 60% at 75% 45%,rgba(94,224,255,.45),transparent 70%),linear-gradient(rgba(255,255,255,.10) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,rgba(255,255,255,.10) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(160deg,#0a238f,#1d47ff 55%,#6a3dff)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px;align-items:center}
+.hero p{font-size:17px;max-width:56ch;color:#e6efff}
+.hero svg{width:100%;height:auto;max-height:440px;overflow:visible}
+.by{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin-top:6px;padding:10px 16px;border-radius:18px;background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.6);width:fit-content;max-width:100%}
+.by span{font-size:14px;color:#e6efff;width:100%}.by b{font:800 22px/1.15 "Baloo 2",sans-serif;color:#fff;text-shadow:2px 2px 0 #0a238f}.by i{color:#ff9ae0;font-style:normal}.by em{font:800 14px "Be Vietnam Pro",sans-serif;font-style:normal;background:var(--holo);color:#0a238f;border:2px solid #0a238f;border-radius:999px;padding:1px 10px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+.btn{border:2px solid #0a238f;border-radius:999px;padding:11px 20px;min-height:44px;font-weight:800;background:var(--gel);color:#fff;display:inline-flex;align-items:center;gap:8px;text-decoration:none;text-shadow:1px 1px 0 rgba(10,35,143,.6);
+box-shadow:inset 0 3px 0 rgba(255,255,255,.55),inset 0 -3px 6px rgba(0,0,40,.25),0 4px 0 #0a238f;transition:transform .1s,box-shadow .1s}
+.btn:hover{filter:brightness(1.08) saturate(1.1)}.btn:active{transform:translateY(3px);box-shadow:inset 0 3px 0 rgba(255,255,255,.55),0 1px 0 #0a238f}
+.btn.w,.btn.g{background:var(--chrome);color:#0a238f;text-shadow:none}
+.btn.o{background:linear-gradient(180deg,#ff9ae0 0%,#ff3fbf 48%,#f01fa8 52%,#ff6fd0 100%)}
+.btn.ghost{background:var(--holo);color:#0a238f;text-shadow:none}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))}
+.card{background:var(--card);border-radius:14px;padding:46px 20px 20px;box-shadow:var(--sh);border:2px solid var(--line);position:relative}
+.card::before{content:"";position:absolute;inset:0 0 auto;height:28px;border-radius:11px 11px 0 0;background:linear-gradient(90deg,#1d47ff,#5ea3ff 70%,#a8e6ff);border-bottom:2px solid var(--line)}
+.card::after{content:"";position:absolute;top:8px;right:10px;width:52px;height:12px;background:radial-gradient(circle at 6px 6px,#fff 4px,#0a238f 5px,transparent 6px) 0 0/18px 12px repeat-x}
+.tile{text-decoration:none;color:inherit;display:block;transition:transform .15s}.tile:hover{transform:translate(-2px,-3px) rotate(-.6deg);box-shadow:8px 8px 0 var(--acc)}
+.tile b{display:block;font:800 22px "Baloo 2",sans-serif;margin-bottom:4px;color:var(--blue2)}
+.tile .ic{width:52px;height:52px;border-radius:50%;background:var(--holo);border:2px solid var(--line);display:grid;place-items:center;margin-bottom:12px;color:#0a238f;box-shadow:inset 0 3px 0 rgba(255,255,255,.7)}
+.muted{color:var(--mute)}.small{font-size:14px}
+.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.stat{background:rgba(255,255,255,.14);border:2px solid rgba(255,255,255,.6);border-radius:16px;padding:8px 16px;backdrop-filter:blur(4px)}.stat b{font:800 28px/1.1 "Baloo 2",sans-serif;display:block;color:#fff;text-shadow:2px 2px 0 var(--acc)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}
+.tabs button{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 16px;min-height:44px;font-weight:700;box-shadow:0 3px 0 var(--line)}
+.tabs button.on{background:var(--gel);color:#fff;text-shadow:1px 1px 0 #0a238f;box-shadow:inset 0 3px 0 rgba(255,255,255,.5),0 3px 0 var(--line)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.pill{display:inline-block;font-size:13px;font-weight:800;padding:1px 10px;border-radius:999px;background:var(--holo);color:#0a238f;border:2px solid #0a238f}
+.pill.u5{background:linear-gradient(110deg,#ffb6ec,#ffd1f3 50%,#ff8fd8)}
+.deck{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,320px);gap:22px;align-items:start}
+.flip{perspective:1200px;height:310px;cursor:pointer}
+.fi{position:relative;width:100%;height:100%;transition:transform .55s;transform-style:preserve-3d}
+.flip.on .fi{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;border-radius:26px;padding:28px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border:3px solid #0a238f;box-shadow:7px 7px 0 #0a238f}
+.front{color:#fff;background:radial-gradient(120% 60% at 50% 0%,rgba(255,255,255,.45),transparent 55%),linear-gradient(135deg,#1d47ff,#4f7bff 45%,#9b5cff 80%,#ff3fbf)}
+.front .w{font:800 clamp(32px,5vw,48px)/1.05 "Baloo 2",sans-serif;text-shadow:3px 3px 0 #0a238f}
+.back{background:var(--holo);color:#071552;transform:rotateY(180deg)}.back .w{font:800 28px/1.1 "Baloo 2",sans-serif;color:#0a238f}
+.back .ex{color:#2b3a78}
+.hint{font-size:13px;opacity:.85;margin-top:14px}
+.spk{border:2px solid #0a238f;background:var(--chrome);color:#0a238f;width:44px;height:44px;border-radius:50%;display:inline-grid;place-items:center;flex:none;box-shadow:inset 0 2px 0 #fff,0 3px 0 #0a238f}
+.spk:active{transform:translateY(2px);box-shadow:0 1px 0 #0a238f}
+.front .spk{margin-top:14px}
+.spk svg,.ic svg{width:22px;height:22px}
+input[type=search],input[type=text],select{font:inherit;font-size:16px;padding:10px 14px;border-radius:12px;border:2px solid var(--line);background:var(--card);color:var(--ink);min-height:44px;box-shadow:inset 2px 2px 0 var(--ld14)}
+input[type=range]{accent-color:var(--acc)}
+table{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border-radius:14px;overflow:hidden;border:2px solid var(--line)}
+th,td{padding:10px 12px;text-align:start;border-bottom:1px solid var(--ld15);vertical-align:top}
+th{background:var(--gel);color:#fff;font-size:14px;text-shadow:1px 1px 0 #0a238f}
+tr:nth-child(even) td{background:var(--ld16)}
+.list{display:grid;gap:10px}
+.li{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:2px solid var(--line);border-radius:16px;padding:12px 14px;box-shadow:3px 3px 0 var(--line)}
+.li .t{flex:1}.li b{color:var(--blue2)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--chrome);color:#0a238f;border:2px solid #0a238f;border-radius:999px;padding:5px 13px;font-weight:700;font-size:15px;min-height:38px;box-shadow:0 2px 0 #0a238f}
+.chip:hover{background:var(--holo)}
+.rule{border-inline-start:5px solid var(--blue);padding-inline-start:14px;margin:0 0 14px}
+.rule.u5{border-color:var(--acc)}
+.ex{color:var(--mute);font-style:italic}
+.cols{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+ul.clean{margin:0;padding-inline-start:4px;list-style:none}ul.clean li{margin-bottom:6px;padding-inline-start:22px;position:relative}
+ul.clean li::before{content:"✦";position:absolute;inset-inline-start:0;color:var(--acc)}
+.game{display:none}.game.on{display:block}
+.mem{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px}
+.mc{aspect-ratio:16/9;min-height:92px;border:2px solid #0a238f;border-radius:18px;background:radial-gradient(70% 45% at 50% 18%,rgba(255,255,255,.65),transparent 70%),linear-gradient(160deg,#4f7bff,#1d47ff 60%,#9b5cff);color:#fff;font-weight:800;font-size:15px;padding:8px;display:grid;place-items:center;line-height:1.25;transition:transform .2s;box-shadow:0 4px 0 #0a238f;text-shadow:1px 1px 0 #0a238f}
+.mc:not(.up):not(.done){font:800 34px "Baloo 2",sans-serif}
+.mc:hover{transform:translateY(-2px) rotate(-1deg)}
+.mc.up{background:var(--holo);color:#071552;text-shadow:none}
+.mc.done{background:linear-gradient(160deg,#b6ffd9,#5ef0a8);color:#064a2a;text-shadow:none;opacity:.85}
+.mc.no{animation:sh .35s}
+@keyframes sh{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.big{font:800 clamp(34px,6.5vw,60px)/1.05 "Baloo 2",sans-serif;text-align:center;color:var(--blue2);margin:18px 0;text-shadow:3px 3px 0 var(--ld13)}
+.bar{height:14px;background:var(--card);border:2px solid var(--line);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;transition:width .3s;background:repeating-linear-gradient(-45deg,#1d47ff 0 10px,#5ea3ff 10px 20px);box-shadow:inset 0 3px 0 rgba(255,255,255,.45)}
+.choice{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}
+.opt{border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:16px;padding:14px 16px;text-align:start;font-weight:700;min-height:52px;box-shadow:0 3px 0 var(--line);transition:transform .1s}
+.opt:hover{background:var(--ld17);transform:translateY(-1px)}
+.opt.ok{border-color:var(--ok);background:var(--ld18);box-shadow:0 3px 0 var(--ok)}.opt.bad{border-color:var(--bad);background:var(--ld19);box-shadow:0 3px 0 var(--bad)}
+.opt.sel{background:var(--holo);color:#071552}
+.fb{margin-top:14px;padding:12px 14px;border-radius:14px;background:var(--holo);color:#071552;border:2px dashed #0a238f}
+.fb .ok-t{color:#06733e}.fb .bad-t{color:#c0124f}
+.letters{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin:18px 0}
+.letters span{width:46px;height:52px;border-radius:10px;background:var(--chrome);color:#0a238f;border:2px solid #0a238f;box-shadow:0 4px 0 #0a238f;display:grid;place-items:center;font:800 26px "Baloo 2",sans-serif;text-transform:uppercase}
+.score{font:800 clamp(56px,10vw,96px)/1 "Baloo 2",sans-serif;background:linear-gradient(180deg,#5ea3ff,#1d47ff 55%,#ff3fbf);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(3px 3px 0 #0a238f)}
+.rv{border-top:2px dashed var(--ld20);padding:12px 0}
+.ok-t{color:var(--ok);font-weight:800}.bad-t{color:var(--bad);font-weight:800}
+.meter{font:800 22px "Baloo 2",sans-serif;background:var(--chrome);color:#0a238f;border:2px solid #0a238f;border-radius:999px;padding:0 14px}
+.meter:empty{display:none}
+.gwrap{display:grid;grid-template-columns:minmax(0,270px) minmax(0,1fr);gap:24px;align-items:start}
+.gnav{display:grid;gap:8px;position:sticky;top:96px}
+.gnav button{text-align:start;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;padding:10px 12px;font-weight:700;font-size:15px;min-height:44px;box-shadow:0 3px 0 var(--line);line-height:1.3}
+.gnav button.on{background:var(--gel);color:#fff;text-shadow:1px 1px 0 #0a238f}
+.gnav .pill{font-size:11px;padding:0 6px;margin-inline-end:4px;text-shadow:none}
+.formula{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px;padding:12px;border-radius:14px;background:var(--holo);border:2px solid #0a238f}
+.flab{font:800 14px "Baloo 2",sans-serif;color:#0a238f;margin-inline-end:4px}
+.formula code{font:700 15px/1.3 "Be Vietnam Pro",sans-serif;background:#fff;color:#0a238f;border:2px solid #0a238f;border-radius:10px;padding:5px 10px;box-shadow:0 2px 0 #0a238f}
+.pt{display:grid;grid-template-columns:44px minmax(0,1fr);gap:14px;margin-top:18px;background:var(--card);border:2px solid var(--line);border-radius:18px;padding:18px;box-shadow:4px 4px 0 var(--line)}
+.pn{width:44px;height:44px;border-radius:50%;background:var(--gel);color:#fff;display:grid;place-items:center;font:800 22px "Baloo 2",sans-serif;border:2px solid #0a238f;box-shadow:inset 0 3px 0 rgba(255,255,255,.5)}
+.pt h3{margin:4px 0 4px}.pt p{margin-bottom:10px}
+.exs{display:grid;gap:8px}
+.exr{display:flex;gap:12px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--ld16);border-inline-start:4px solid var(--acc)}
+.exr .t{flex:1}.exr .en{font-weight:600;font-size:17px}.exr .vi{color:var(--mute);font-size:14px;margin-top:2px}.exr .eq{font-size:13px;color:var(--blue2);font-weight:700;margin-top:2px}
+mark{background:linear-gradient(transparent 45%,var(--ld21) 45%);color:inherit;font-weight:800;padding:0 2px;border-radius:3px}
+.note{margin-top:18px;padding:14px 16px;border-radius:16px;border:2px dashed var(--acc);background:var(--ld22)}
+.gqi{padding:10px 0;border-bottom:2px dashed var(--ld20)}.gqi:last-child{border:0}
+.gqo{min-height:44px;padding:8px 16px}.gqf{margin-top:8px}
+@media(max-width:860px){.gwrap{grid-template-columns:minmax(0,1fr)}.gnav{position:static;display:flex;overflow-x:auto;gap:8px;padding-bottom:6px}.gnav button{flex:none}}
+@media(max-width:600px){.pt{grid-template-columns:minmax(0,1fr)}.pn{width:36px;height:36px;font-size:18px}}
+.rwrap{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:24px;align-items:start}
+.rwrap aside{position:sticky;top:96px}
+.rlist{display:grid;gap:10px}
+.rcard{text-align:start;border:2px solid var(--line);background:var(--card);color:var(--ink);border-radius:16px;padding:12px 14px;box-shadow:0 3px 0 var(--line);display:grid;gap:4px;justify-items:start}
+.rcard b{font:800 18px/1.15 "Baloo 2",sans-serif;color:var(--blue2)}
+.rcard.on{background:var(--holo);color:#071552}.rcard.on b{color:#0a238f}.rcard.on .muted{color:#3a4a85}
+.glbox{margin-top:16px}.glbox summary{cursor:pointer;font-weight:800;color:var(--blue2);min-height:44px;display:flex;align-items:center}
+@media(max-width:860px){.rwrap{grid-template-columns:minmax(0,1fr)}.rwrap aside{position:static}.rlist{display:flex;overflow-x:auto;padding-bottom:6px}.rcard{flex:none;width:230px}}
+.exam .instr{font-weight:700;font-style:italic;margin:12px 0 6px}
+.ptitle{text-align:center;margin:10px 0 14px}
+.ptext{font-size:17px;line-height:1.85;text-align:justify;hyphens:auto;background:var(--ld23);border:2px solid var(--line);border-radius:14px;padding:18px 20px;text-indent:2em}
+.srcline{margin:10px 0 14px}.srcline a{color:var(--blue2);font-weight:600}
+.eq{margin:22px 0 18px;padding-inline-start:24px;display:grid;gap:16px}
+.eq li{font-weight:700}.eq li::marker{color:var(--blue2);font-weight:800}
+.qq{margin:0 0 8px}
+.eo{display:grid;gap:8px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));font-weight:600}
+.eopt{min-height:44px;padding:10px 14px}
+footer{padding:28px 0;color:var(--mute);font-size:14px;text-align:center}
+footer b{color:var(--acc)}
+.spark{animation:tw 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes tw{50%{transform:scale(.4);opacity:.5}}
+@media(max-width:860px){.hero .wrap,.deck{grid-template-columns:minmax(0,1fr)}.hero svg{max-height:300px}}
+@media(max-width:600px){.mem{grid-template-columns:repeat(3,minmax(0,1fr))}.mc{font-size:13px}nav a{padding:6px 10px;font-size:14px}.logo span{display:none}table{font-size:13px}.flip{height:270px}}
+@media(prefers-reduced-motion:reduce){.fi,.tile,.mc{transition:none}.mc.no,.ticker div,.spark{animation:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-spk" viewBox="0 0 24 24"><path fill="currentColor" d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><path fill="currentColor" d="M12 15a3 3 0 0 0 3-3V6a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V22h2v-3.1A7 7 0 0 0 19 12h-2z"/></symbol>
+<symbol id="i-book" viewBox="0 0 24 24"><path fill="currentColor" d="M5 3h11a3 3 0 0 1 3 3v15H7a2 2 0 0 1-2-2V3zm2 14v2h10v-2H7z"/></symbol>
+<symbol id="i-game" viewBox="0 0 24 24"><path fill="currentColor" d="M7 7h10a5 5 0 0 1 0 10c-1.6 0-2.5-1-3.3-2h-3.4c-.8 1-1.7 2-3.3 2A5 5 0 0 1 7 7zm0 3v1.5H5.5V13H7v1.5h1.5V13H10v-1.5H8.5V10H7zm9 .5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm2 2a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/></symbol>
+<symbol id="i-test" viewBox="0 0 24 24"><path fill="currentColor" d="M6 2h9l5 5v15H6V2zm8 1.5V8h4.5L14 3.5zM8.5 13l2.5 2.5 4.5-4.5-1.1-1.1-3.4 3.4-1.4-1.4L8.5 13z"/></symbol>
+</svg>
+
+<header><div class="wrap">
+<a class="logo" href="#home">Ôn tập 11A2 <span>Unit 4 & Unit 5</span></a>
+<nav id="nav">
+<a href="#home" data-v="home">Trang chủ</a><a href="#learn" data-v="learn">Học bài</a><a href="#read" data-v="read">Bài đọc</a><a href="#games" data-v="games">Trò chơi</a><a href="#test" data-v="test">Bài test</a><a href="#speak" data-v="speak">Luyện nói</a>
+</nav></div></header>
+
+<!-- HOME -->
+<section class="view" id="v-home">
+<div class="ticker" aria-hidden="true"><div>✦ UNIT 4 · ASEAN AND VIET NAM ✦ UNIT 5 · GLOBAL WARMING ✦ BREAK THE ICE ✦ GO GREEN ✦ GERUND & INFINITIVE ✦ PARTICIPLE CLAUSES ✦ CUT EMISSIONS ✦ JOIN FORCES ✦ A RACE AGAINST TIME ✦ UNIT 4 · ASEAN AND VIET NAM ✦ UNIT 5 · GLOBAL WARMING ✦ BREAK THE ICE ✦ GO GREEN ✦ GERUND & INFINITIVE ✦ PARTICIPLE CLAUSES ✦ CUT EMISSIONS ✦ JOIN FORCES ✦ A RACE AGAINST TIME </div></div>
+<div class="hero"><div class="wrap" style="padding-top:clamp(20px,3vw,40px)">
+<div>
+<h1>ASEAN & Global Warming — ôn gọn, nhớ lâu</h1>
+<div class="by"><span>Thực hiện bởi</span><b>Nguyễn Gia Huy</b><i>✦</i><b>Triệu Huỳnh Minh Trân</b><em>11A2</em></div>
+<div class="cta"><a class="btn w" href="#learn">Bắt đầu học</a><a class="btn o" href="#test">Làm bài test</a><a class="btn ghost" href="#speak">Luyện nói</a></div>
+<div class="stats" id="stats"></div>
+</div>
+<svg viewBox="0 0 420 380" role="img" aria-label="Quả địa cầu xanh với vòng quỹ đạo mười chấm và nhiệt kế">
+<defs><radialGradient id="gl" cx="38%" cy="32%" r="75%"><stop offset="0" stop-color="#e8f6ff"/><stop offset=".25" stop-color="#7fc4ff"/><stop offset=".65" stop-color="#2a5cff"/><stop offset="1" stop-color="#1a1080"/></radialGradient>
+<linearGradient id="th" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#ff6a3d"/><stop offset="1" stop-color="#ffb347"/></linearGradient></defs>
+<circle cx="335" cy="62" r="50" fill="#ff3fbf" opacity=".22"/><circle cx="335" cy="62" r="34" fill="#ff8fd8" stroke="#fff" stroke-width="3"/>
+<ellipse cx="190" cy="340" rx="130" ry="16" fill="#062a7a" opacity=".45"/>
+<circle cx="190" cy="190" r="140" fill="url(#gl)"/>
+<path d="M95 140c25-30 70-38 88-22 15 13-6 30 10 44 18 15 50-2 58 22 8 23-25 35-48 33-28-2-30 26-58 22-30-4-42-40-55-58-6-9-4-29 5-41z" fill="#b6fff0" opacity=".75"/>
+<path d="M240 90c20-6 52 4 62 22 8 15-10 22-26 18-18-4-30 10-44 2-14-8-10-36 8-42zM230 255c18-10 46-6 54 8 7 13-8 30-28 30-24 0-40-26-26-38z" fill="#b6fff0" opacity=".7"/>
+<ellipse cx="140" cy="120" rx="52" ry="24" fill="#fff" opacity=".45" transform="rotate(-25 140 120)"/>
+<ellipse cx="190" cy="190" rx="185" ry="52" fill="none" stroke="#ff9ae0" stroke-width="3" opacity=".9" transform="rotate(-14 190 190)"/>
+<g id="dots"></g><path class="spark" style="animation-delay:0s" d="M40 38C43.3 56.7 43.3 56.7 62 60C43.3 63.3 43.3 63.3 40 82C36.7 63.3 36.7 63.3 18 60C36.7 56.7 36.7 56.7 40 38z" fill="#fff"/><path class="spark" style="animation-delay:0.8s" d="M88 286C90.1 297.9 90.1 297.9 102 300C90.1 302.1 90.1 302.1 88 314C85.9 302.1 85.9 302.1 74 300C85.9 297.9 85.9 297.9 88 286z" fill="#ff9ae0"/><path class="spark" style="animation-delay:1.4s" d="M300 312C302.7 327.3 302.7 327.3 318 330C302.7 332.7 302.7 332.7 300 348C297.3 332.7 297.3 332.7 282 330C297.3 327.3 297.3 327.3 300 312z" fill="#a8f0ff"/><path class="spark" style="animation-delay:0.4s" d="M255 18C256.8 28.2 256.8 28.2 267 30C256.8 31.8 256.8 31.8 255 42C253.2 31.8 253.2 31.8 243 30C253.2 28.2 253.2 28.2 255 18z" fill="#fff"/><path class="spark" style="animation-delay:1.9s" d="M20 190C21.5 198.5 21.5 198.5 30 200C21.5 201.5 21.5 201.5 20 210C18.5 201.5 18.5 201.5 10 200C18.5 198.5 18.5 198.5 20 190z" fill="#ffd1f3"/>
+<rect x="370" y="140" width="26" height="170" rx="13" fill="#fff" opacity=".95"/>
+<rect x="377" y="180" width="12" height="122" rx="6" fill="url(#th)"><animate attributeName="y" values="230;180;230" dur="6s" repeatCount="indefinite"/><animate attributeName="height" values="72;122;72" dur="6s" repeatCount="indefinite"/></rect>
+<circle cx="383" cy="316" r="20" fill="#ff6a3d" stroke="#fff" stroke-width="5"/>
+</svg>
+</div></div>
+<div class="wrap" style="padding-top:32px">
+<h2>Hôm nay ôn gì?</h2>
+<div class="grid">
+<a class="card tile" href="#learn"><div class="ic"><svg><use href="#i-book"/></svg></div><b>Học bài</b><span class="muted">Thẻ từ vựng lật mặt, word family, 16 idioms, collocations và ngữ pháp có ví dụ.</span></a>
+<a class="card tile" href="#read"><div class="ic"><svg><use href="#i-book"/></svg></div><b>Bài đọc</b><span class="muted">6 bài đọc dạng đề thi từ nguồn ASEAN, UNESCO, NASA, VOA, Liên Hợp Quốc.</span></a>
+<a class="card tile" href="#games"><div class="ic"><svg><use href="#i-game"/></svg></div><b>Trò chơi</b><span class="muted">Lật thẻ ghép nghĩa, đua V-ing / to V / V0 trong 45 giây, xếp chữ đoán từ.</span></a>
+<a class="card tile" href="#test"><div class="ic"><svg><use href="#i-test"/></svg></div><b>Bài test</b><span class="muted">Ngân hàng hơn 50 câu trắc nghiệm, chế độ luyện tập có giải thích hoặc thi thử bấm giờ.</span></a>
+<a class="card tile" href="#speak"><div class="ic"><svg><use href="#i-mic"/></svg></div><b>Luyện nói</b><span class="muted">Nghe giọng đọc chuẩn, chỉnh tốc độ, nói thử để máy chấm, kèm bài thuyết trình mẫu.</span></a>
+</div></div>
+</section>
+
+<!-- LEARN -->
+<section class="view" id="v-learn"><div class="wrap">
+<h2>Học bài</h2>
+<div class="tabs" id="ltabs">
+<button data-t="cards" class="on">Thẻ từ vựng</button><button data-t="wf">Word family</button><button data-t="idioms">Idioms</button><button data-t="col">Collocations & Phrasal verbs</button><button data-t="gram">Ngữ pháp</button><button data-t="skill">Kỹ năng</button>
+</div>
+<div id="lbody"></div>
+</div></section>
+
+<!-- READ -->
+<section class="view" id="v-read"><div class="wrap">
+<h2>Bài đọc</h2>
+<p class="muted" style="max-width:72ch">6 bài đọc theo dạng đề thi, mỗi bài kèm 5 câu hỏi trắc nghiệm A–B–C–D. Nội dung lấy từ các nguồn uy tín: ASEAN, UNESCO, NASA, VOA Learning English, Liên Hợp Quốc. Bấm vào tên nguồn dưới mỗi bài để đọc bản gốc.</p>
+<div class="rwrap"><aside><select id="rFil" aria-label="Lọc theo unit" style="width:100%;margin-bottom:10px"><option value="all">Tất cả bài đọc</option><option value="4">Unit 4 – ASEAN</option><option value="5">Unit 5 – Global Warming</option></select><div class="rlist" id="rList"></div>
+<p class="small muted" style="margin-top:10px">Các bài được viết lại (adapted) ở trình độ lớp 11 dựa trên thông tin từ nguồn gốc, không chép nguyên văn.</p></aside><div id="rBody"></div></div>
+</div></section>
+
+<!-- GAMES -->
+<section class="view" id="v-games"><div class="wrap">
+<h2>Trò chơi</h2>
+<div class="tabs" id="gtabs"><button data-g="mem" class="on">Lật thẻ ghép nghĩa</button><button data-g="verb">Đua V-ing / to V / V0</button><button data-g="scr">Xếp chữ đoán từ</button></div>
+
+<div class="game card on" id="g-mem">
+<div class="row"><h3 style="margin:0;margin-inline-end:auto">Lật 2 thẻ: tiếng Anh ↔ nghĩa tiếng Việt</h3>
+<select id="memSet" aria-label="Bộ thẻ"><option value="id">Idioms</option><option value="v">Từ vựng</option><option value="mix">Trộn cả hai</option></select>
+<button class="btn" id="memNew">Ván mới</button></div>
+<p class="muted small" id="memInfo" style="margin-top:8px"></p>
+<div class="mem" id="mem"></div>
+</div>
+
+<div class="game card" id="g-verb">
+<div class="row"><h3 style="margin:0;margin-inline-end:auto">Sau từ này dùng dạng nào?</h3><span class="meter" id="vTime">45s</span><span class="meter" id="vScore">0 điểm</span></div>
+<div class="bar" style="margin-top:12px"><i id="vBar"></i></div>
+<div class="big" id="vWord">Bấm “Bắt đầu”</div>
+<div class="choice" id="vBtns">
+<button class="opt" data-a="ing" style="text-align:center">V-ing</button><button class="opt" data-a="to" style="text-align:center">to V</button><button class="opt" data-a="v0" style="text-align:center">V0 (nguyên mẫu)</button>
+</div>
+<div class="row" style="margin-top:14px"><button class="btn o" id="vStart">Bắt đầu</button><span class="muted small" id="vMsg">Đúng liên tiếp được cộng thêm điểm thưởng. Phím tắt: 1, 2, 3.</span></div>
+</div>
+
+<div class="game card" id="g-scr">
+<div class="row"><h3 style="margin:0;margin-inline-end:auto">Sắp xếp các chữ cái thành từ đúng</h3><span class="meter" id="sScore">0 / 0 từ</span></div>
+<p class="muted" id="sHint" style="margin-top:10px"></p>
+<div class="letters" id="sLet"></div>
+<form id="sForm" class="row" style="justify-content:center"><input type="text" id="sIn" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Gõ từ của bạn" aria-label="Đáp án"><button class="btn">Kiểm tra</button><button type="button" class="btn g" id="sHelp">Gợi ý</button><button type="button" class="btn g" id="sSkip">Bỏ qua</button></form>
+<div class="fb" id="sFb" hidden></div>
+</div>
+</div></section>
+
+<!-- TEST -->
+<section class="view" id="v-test"><div class="wrap" style="max-width:860px">
+<div id="tSetup" class="card">
+<h2>Bài kiểm tra Unit 4 & 5</h2>
+<p class="muted">Câu hỏi được trộn ngẫu nhiên từ ngân hàng hơn 50 câu: từ vựng, word form, Gerund / Infinitive, mệnh đề phân từ, idioms, collocations và kỹ năng đọc.</p>
+<div class="cols" style="gap:14px;margin:16px 0">
+<label>Phạm vi<br><select id="tUnit" style="width:100%"><option value="all">Cả Unit 4 và Unit 5</option><option value="4">Chỉ Unit 4</option><option value="5">Chỉ Unit 5</option></select></label>
+<label>Số câu<br><select id="tNum" style="width:100%"><option>10</option><option selected>20</option><option>30</option></select></label>
+<label>Chế độ<br><select id="tMode" style="width:100%"><option value="p">Luyện tập – xem đáp án ngay</option><option value="e">Thi thử – bấm giờ, chấm cuối bài</option></select></label>
+</div>
+<button class="btn o" id="tGo">Bắt đầu làm bài</button>
+<p class="muted small" id="tBest" style="margin-top:12px"></p>
+</div>
+<div id="tRun" class="card" hidden>
+<div class="row"><span class="pill" id="tTag"></span><span class="muted small" style="margin-inline-end:auto" id="tPos"></span><span class="meter" id="tClock"></span></div>
+<div class="bar" style="margin:12px 0 18px"><i id="tBar"></i></div>
+<h3 id="tQ" style="font-size:21px;line-height:1.35"></h3>
+<div class="list" id="tOpts" style="margin-top:14px"></div>
+<div class="fb" id="tFb" hidden></div>
+<div class="row" style="margin-top:16px;justify-content:space-between"><button class="btn g" id="tQuit">Thoát</button><button class="btn" id="tNext" hidden>Câu tiếp</button></div>
+</div>
+<div id="tEnd" class="card" hidden></div>
+</div></section>
+
+<!-- SPEAK -->
+<section class="view" id="v-speak"><div class="wrap">
+<h2>Luyện nói</h2>
+<div class="card" style="margin-bottom:18px">
+<div class="row">
+<label>Giọng đọc <select id="voice" style="max-width:260px"></select></label>
+<label>Tốc độ <input type="range" id="rate" min="0.6" max="1.2" step="0.1" value="0.9" style="vertical-align:middle"> <b id="rateV">0.9×</b></label>
+<span class="muted small" id="srNote"></span>
+</div></div>
+<div class="tabs" id="stabs"><button data-s="words" class="on">Từ vựng</button><button data-s="idioms">Thành ngữ</button><button data-s="sent">Câu mẫu ngữ pháp</button><button data-s="pres">Thuyết trình ASEAN</button></div>
+<div id="sbody"></div>
+</div></section>
+
+<footer>Thực hiện bởi Nguyễn Gia Huy & Triệu Huỳnh Minh Trân · Ôn tập Unit 4 & 5 · lớp 11A2 <b>✦</b> Le Quy Don High School · nội dung theo đề cương ôn tập của lớp</footer>
+
+<script>
+{
+/* ================= DATA ================= */
+const V=[
+// [en, vi, example, unit]
+["cultural exchange","giao lưu văn hóa","The two schools organised a cultural exchange in which students introduced their traditional food and music.",4],
+["gender equality","bình đẳng giới","Gender equality means that men and women should have the same rights and opportunities.",4],
+["problem-solving skills","kỹ năng giải quyết vấn đề","Group projects can help students develop problem-solving skills.",4],
+["leadership skills","kỹ năng lãnh đạo","Organising a school event is a good way for students to develop leadership skills.",4],
+["live-stream","phát sóng trực tiếp","The school will live-stream its annual performance so that parents can watch it online.",4],
+["relations","mối quan hệ (giữa các nước/tổ chức)","The two universities have maintained close relations for many years.",4],
+["eye-opening","mở mang tầm mắt, đáng kinh ngạc","Visiting a poor rural community was an eye-opening experience for the students.",4],
+["initiative","sáng kiến","The students launched an initiative to provide books for children in remote areas.",4],
+["stereotype","định kiến, khuôn mẫu","The film challenges the stereotype that older people cannot learn new technology.",4],
+["international affairs","các vấn đề / quan hệ quốc tế","Students who study international affairs learn about relationships between countries and global issues.",4],
+["lay the groundwork for","đặt nền móng cho điều gì","The agreement between the two universities laid the groundwork for future cooperation.",4],
+["go sightseeing","đi ngắm cảnh, tham quan","During their trip to Hue, the students went sightseeing and visited several historical sites.",4],
+["global warming","sự nóng lên toàn cầu","Global warming is the increase in temperature of the earth's atmosphere caused by particular gases, especially CO2.",5],
+["greenhouse gases","khí nhà kính","Greenhouse gases trap heat; they include chlorofluorocarbons, methane, nitrous oxide and carbon dioxide.",5],
+["carbon footprint","dấu chân carbon","Your carbon footprint is the total amount of greenhouse gases generated by your actions.",5],
+["organic food","thực phẩm hữu cơ","Organic food is produced without artificial chemicals or pesticides.",5],
+["landfill","bãi chôn lấp rác","A landfill is an area of land where large amounts of waste are buried under the earth.",5],
+["soot","bồ hóng, muội than","Soot is the black powder produced when wood or coal is burnt.",5],
+["renewable energy","năng lượng tái tạo","Solar power is a renewable energy source.",5],
+["eco-friendly","thân thiện với môi trường","Cycling is an eco-friendly means of transportation.",5],
+["deforestation","nạn phá rừng","Deforestation releases a lot of CO2 into the atmosphere.",5],
+["emission","sự phát thải, khí thải","Many countries have promised to cut emissions.",5]
+];
+const ID=[
+// [idiom, vi, en, example, unit]
+["break the ice","phá tan sự ngại ngùng ban đầu","make people feel relaxed when first meeting","The teacher organised a fun game to break the ice with the ASEAN exchange students.",4],
+["see eye to eye","đồng quan điểm, nhất trí hoàn toàn","agree completely with someone","The member countries do not always see eye to eye on every economic issue.",4],
+["bridge the gap","thu hẹp khoảng cách","reduce differences between two groups","Youth cultural exchanges help bridge the gap between different ASEAN communities.",4],
+["join forces","hợp lực, chung tay","work together to achieve a shared goal","Ten ASEAN nations joined forces to promote sustainable tourism in the region.",4],
+["be on the same page","thống nhất cách hiểu","have the same understanding or agreement","Before submitting the proposal, make sure every team member is on the same page.",4],
+["pull together","đoàn kết, cùng nỗ lực","work together as a group to succeed","If all countries pull together, we can tackle regional challenges more effectively.",4],
+["find common ground","tìm tiếng nói chung","discover shared interests to reach agreement","Despite cultural differences, the delegates quickly found common ground during the summit.",4],
+["go hand in hand","đi đôi, gắn liền với nhau","be closely connected and happen together","Regional peace and economic development always go hand in hand.",4],
+["a drop in the ocean","muối bỏ bể","a tiny amount compared to what is needed","Planting a few trees is just a drop in the ocean unless industries cut emissions.",5],
+["the tip of the iceberg","phần nổi của tảng băng chìm","only a small visible part of a bigger problem","Rising summer heatwaves are merely the tip of the iceberg of global warming.",5],
+["go green","sống xanh","adopt environmentally friendly habits","More companies are going green by switching to solar power and reducing plastic waste.",5],
+["a race against time","cuộc chạy đua với thời gian","having to act urgently before it is too late","Limiting global temperature rise to 1.5°C has become a race against time.",5],
+["weather the storm","vượt qua sóng gió","survive or deal successfully with a crisis","Coastal communities need stronger infrastructure to weather the storm of climate change.",5],
+["turn over a new leaf","thay đổi tích cực, sang trang mới","start behaving in a more responsible way","After the heavy fine for illegal dumping, the factory promised to turn over a new leaf.",5],
+["in hot water","gặp rắc rối nghiêm trọng","in serious trouble or difficulty","The company landed in hot water for releasing untreated waste into the river.",5],
+["the calm before the storm","sự yên bình trước cơn bão","a quiet period right before major trouble","Scientists warn that mild weather this winter may just be the calm before the storm.",5]
+];
+const WF4=[["Awareness","—","Aware ≠ Unaware","—"],["Discussion","Discuss","—","—"],["Organization, Organizer","Organize","Organized ≠ Disorganized, Organizational","Organizationally"],["Issue","—","—","—"],["Promotion, Promoter","Promote","Promotional","—"],["Disability","Disable","Disabled","—"],["Representation, Representative","Represent","Representative","—"],["Relation, Relationship, Relative","Relate","Relative, Related ≠ Unrelated","Relatively"],["—","—","Eye-opening","—"],["Proposal","Propose","—","—"],["Ice breaker","—","—","—"],["Bond, Bonding","Bond","—","—"],["Leadership, Leader / Lead","Lead","Leading","—"],["Arrangement","Arrange","—","—"],["—","Act","—","—"],["Confidence","Confide","Confidential","Confidentially"],["Contribution, Contributor","Contribute","Contributory","—"]];
+const WF5=[["Balance ≠ Imbalance","Balance","Balanced ≠ Unbalanced / Imbalanced","—"],["Consequence","—","Consequent, Consequential","Consequently"],["Deforestation","Deforest","—","—"],["Emission","Emit","—","—"],["Fossil","Fossilize","Fossil / Fossilized","—"],["Impact","Impact","Impactful","—"],["Pollution, Pollutant / Polluter","Pollute","Polluted ≠ Unpolluted, Polluting","—"],["Release","Release","—","—"],["Renewal","Renew","Renewable ≠ Non-renewable","—"],["Substance","—","Substantial ≠ Insubstantial","Substantially"],["Trap","Trap","—","—"],["Sustainability","Sustain","Sustainable ≠ Unsustainable","Sustainably"],["Energy","—","Energetic","—"],["—","—","Eco-friendly","—"]];
+const COL=[
+[4,"Awareness, Issues & Discussion",["Raise / increase awareness of sth","Public / environmental / cultural awareness; be aware of sth","Hold / have a discussion (with sb about sth)","Under discussion (đang được thảo luận)","Social / environmental / global issue; international affairs","Address / tackle / solve / raise an issue","Challenge a stereotype (thách thức định kiến)"]],
+[4,"Events, Promotion & Initiatives",["Organize an event / a meeting / a competition / a cultural exchange","Organizational skills; launch an initiative (phát động sáng kiến)","Promote tourism / trade / education / cultural exchange","Sales promotion; promotional campaign / material","Put forward / make / submit / approve / reject a proposal","Arrange a meeting / trip; make arrangement(s) for sth","Live-stream an event; go sightseeing"]],
+[4,"Leadership, Representation & Support",["Lead a team / project; take the lead","Develop leadership / problem-solving skills","Represent a country / company; a legal representative","Representation of women / minority groups; gender equality","Disabled access (lối đi cho người khuyết tật)","Contribute money / time / ideas; make a contribution to sth","A major contributor"]],
+[4,"Relationships & Cooperation",["Have / build a good relationship with sb","Strengthen / maintain close relations","Lay the groundwork for future cooperation","Be closely / directly related to sth","Family bond; create / form / build / strengthen a bond","An eye-opening experience; keep information confidential","Break the ice | On behalf of sb (thay mặt ai)"]],
+[4,"Phrasal verbs & Prepositions",["Put out a call for sth (volunteers / donations) — kêu gọi","Act for sb (= represent sb) | Act on behalf of sb — đại diện cho ai","Confide in sb | Confide sth to sb — tâm sự với ai","Take part in • Contribute to sth • Relate to sth","Representative of sb/sth • Form a bond between..."]],
+[5,"Pollution, Emissions & Impact",["Cut / reduce / control / limit emissions","Reduce / cut / control / tackle / combat / prevent pollution","Have / make an impact on / upon sth","Accept / take / face / suffer the consequences","Drop litter (xả rác)"]],
+[5,"Energy, Resources & Green Living",["Renewable energy sources (e.g. solar power)","Non-renewable resources (natural gas, fossil fuel)","Conserve electricity; household appliances","Eco-friendly means of transportation","Sustainable tourism; carbon footprint"]],
+[5,"Balance & Daily Expressions",["Keep / lose someone's balance","A balanced diet","Fossil fuel(s) / fossil remains"]],
+[5,"Phrasal verbs (Unit 5)",["Cut down (trees / on sth) — chặt phá / cắt giảm","Use sth up — dùng cạn kiệt","Follow up — theo dõi tiếp (follow up the reduction of smoke)"]]
+];
+const GER=["admit","appreciate","avoid","can't help","can't stand","consider","delay","deny","discuss","dislike","enjoy","face","fancy","feel like","finish","hate","imagine","involve","keep","look forward to","mention","mind","miss","practise","recommend","risk","spend time","suggest"];
+const INF=["afford","agree","appear","arrange","ask","attempt","beg","choose","claim","decide","demand","expect","fail","happen","hesitate","hope","intend","learn","manage","mean","offer","plan","prepare","pretend","promise","refuse","seem","tend","threaten","wait","want","wish","would like","would love"];
+const GER_X=["it's no use","it's not worth","there's no point in","have difficulty (in)","have trouble","insist on","apologise for","go (swimming / shopping…)"];
+const INF_X=["would prefer","too hot","fast enough","delighted","important","necessary","sorry","glad"];
+const V0=["can","could","should","must","had better","would rather","might","will"];
+const SCR=[["awareness","sự nhận thức"],["organization","tổ chức"],["representative","người đại diện"],["relationship","mối quan hệ"],["contribution","sự đóng góp"],["leadership","sự lãnh đạo"],["stereotype","định kiến"],["initiative","sáng kiến"],["arrangement","sự sắp xếp"],["proposal","đề xuất"],["confidential","bí mật, kín"],["disability","khuyết tật"],["promotion","sự quảng bá"],["emission","khí thải"],["deforestation","nạn phá rừng"],["pollution","sự ô nhiễm"],["sustainable","bền vững"],["renewable","có thể tái tạo"],["consequence","hậu quả"],["substantial","đáng kể"],["landfill","bãi chôn rác"],["footprint","dấu chân (carbon)"],["balance","sự cân bằng"],["impact","tác động"],["fossil","hóa thạch"],["release","thải ra, giải phóng"],["pollutant","chất gây ô nhiễm"]];
+const SENT=[
+["Jogging is an activity enjoyed by the whole family.","Gerund làm chủ ngữ",4],
+["I insist on taking you out for dinner.","Gerund sau giới từ",4],
+["It's no use asking him for help. He'll refuse.","Gerund sau cụm cố định",4],
+["We've decided to move house.","to V sau decide",4],
+["It's too hot to walk to the park now.","to V sau too",4],
+["You had better get someone to help you decorate your bedroom.","V0 sau had better",4],
+["Ian would rather live in the city.","V0 sau would rather",4],
+["Opening up my sleeping bag, I discovered a scorpion.","Present participle – hành động liền trước",5],
+["Living mainly in warm climates, scorpions have existed for over 400 million years.","Present participle – thông tin nền",5],
+["Arriving in Amalfi early in the afternoon, I had time to look around the town.","Present participle – lý do",5],
+["Made from the softest leather imaginable, they are as comfortable as a pair of slippers.","Past participle – lý do (bị động)",5],
+["Having climbed to the top of the hill, I could see all the way to the Mediterranean.","Perfect participle",5],
+["Being made so welcome at the hotel, I was reluctant to leave.","Passive present participle",5]
+];
+const PRES=[
+["Introducing an organisation","It is known as… / It was established to…"],["Explaining its purpose","Its main aim is to… / It seeks to…"],["Describing its members","It mainly targets… / Its members include…"],["Presenting activities","It organises… / Its members take part in…"],["Explaining cooperation","It helps strengthen relations among… / It promotes cultural exchange between…"],["Describing impact","It provides opportunities for… / It raises awareness of…"],["Making suggestions","We suggest launching… / It would be beneficial to…"]];
+const PRES_SAMPLE=["Good morning, everyone. Today we would like to present the ASEAN Youth Green Club.","It is known as a student club for young people from ASEAN countries, and it was established to connect young people who care about the environment.","Its main aim is to raise awareness of global warming among teenagers.","It mainly targets secondary school students, and its members include volunteers from many ASEAN countries.","It organises tree-planting days, online talks and cultural exchanges. Its members also take part in clean-up campaigns.","It helps strengthen relations among young people in the region and promotes cultural exchange between member countries.","It provides opportunities for students to develop leadership and problem-solving skills.","Finally, we suggest launching a recycling project at our school. It would be beneficial to join forces with other clubs. Thank you for listening."];
+
+/* Question bank: [unit, topic, question, options(first=correct), explanation] */
+const QB=[
+[4,"Word form","The campaign aims to raise public ___ of gender equality.",["awareness","aware","unaware","awarely"],"Sau tính từ “public” cần danh từ → awareness (raise awareness of sth)."],
+[4,"Word form","The event was well ___, so everything went smoothly.",["organized","organize","organization","organizer"],"“be well + V3/adj”: organized = được tổ chức tốt."],
+[4,"Word form","She was chosen as the ___ of our school at the ASEAN youth forum.",["representative","represent","representation","representing"],"Sau “the” cần danh từ chỉ người → representative (người đại diện)."],
+[4,"Word form","Her ___ to the charity project was greatly appreciated.",["contribution","contribute","contributory","contributor"],"Sở hữu “Her” + danh từ chỉ sự việc → contribution to sth."],
+[4,"Word form","Please keep this information ___; don't tell anyone.",["confidential","confidence","confide","confidentially"],"keep + O + adj: keep information confidential."],
+[4,"Word form","The two countries have a ___ close relationship.",["relatively","relative","relation","relate"],"Bổ nghĩa cho tính từ “close” cần trạng từ → relatively."],
+[5,"Word form","We need more ___ energy sources such as solar power.",["renewable","renew","renewal","renewably"],"Trước danh từ “energy sources” cần tính từ → renewable."],
+[5,"Word form","Cutting down forests, or ___, contributes to global warming.",["deforestation","deforest","deforested","forest"],"Cần danh từ đồng vị với “cutting down forests” → deforestation."],
+[5,"Word form","Tourism must be developed ___ to protect the environment.",["sustainably","sustainable","sustain","sustainability"],"Bổ nghĩa cho động từ “be developed” → trạng từ sustainably."],
+[5,"Word form","There has been a ___ increase in sea levels over the past decades.",["substantial","substance","substantially","insubstantially"],"Trước danh từ “increase” cần tính từ → substantial (đáng kể)."],
+[5,"Word form","Factories ___ huge amounts of CO2 into the air every day.",["emit","emission","emissions","emissive"],"Chỗ trống là động từ chính của câu → emit."],
+[5,"Word form","Plastic bags are one of the most common ___ in the ocean.",["pollutants","pollute","polluted","pollution"],"one of the + N số nhiều; chất gây ô nhiễm → pollutants."],
+[4,"Gerund / Infinitive","I'm looking forward to ___ the ASEAN exchange students.",["meeting","meet","to meet","met"],"look forward to + V-ing (to là giới từ)."],
+[4,"Gerund / Infinitive","They decided ___ a cultural exchange next month.",["to organise","organising","organise","organised"],"decide + to V."],
+[4,"Gerund / Infinitive","You had better ___ your report before Friday.",["finish","to finish","finishing","finished"],"had better + V0."],
+[4,"Gerund / Infinitive","It's no use ___ him for help. He'll refuse.",["asking","to ask","ask","asked"],"It's no use + V-ing."],
+[4,"Gerund / Infinitive","Mai refused ___ the stereotype that girls can't be leaders.",["to accept","accepting","accept","accepted"],"refuse + to V."],
+[4,"Gerund / Infinitive","Would you mind ___ the window, please?",["opening","to open","open","opened"],"mind + V-ing."],
+[4,"Gerund / Infinitive","She would rather ___ at home than go sightseeing.",["stay","to stay","staying","stayed"],"would rather + V0."],
+[4,"Gerund / Infinitive","It's important ___ some exercise every day.",["to take","taking","take","taken"],"It's + adj (important) + to V."],
+[4,"Gerund / Infinitive","I'm going out ___ a newspaper.",["to get","getting","get","for getting"],"to V chỉ mục đích."],
+[4,"Gerund / Infinitive","The leader suggested ___ an initiative to plant more trees.",["launching","to launch","launch","launched"],"suggest + V-ing."],
+[4,"Gerund / Infinitive","Julian has difficulty ___ people's names.",["remembering","to remember","remember","remembered"],"have difficulty (in) + V-ing."],
+[4,"Gerund / Infinitive","Alex would prefer ___ the chocolate mousse.",["to have","having","have","had"],"would prefer + to V."],
+[5,"Participle clauses","___ mainly in warm climates, scorpions have existed for over 400 million years.",["Living","Lived","To live","Being lived"],"Chủ động, thông tin nền → present participle (V-ing)."],
+[5,"Participle clauses","___ from recycled plastic, these bags are eco-friendly.",["Made","Making","Having made","To make"],"Túi “được làm” → bị động → past participle (V3)."],
+[5,"Participle clauses","___ the report, she submitted it to the teacher.",["Having finished","Finished","Being finished","Having been finished"],"Hành động hoàn tất trước, chủ động → Having + V3."],
+[5,"Participle clauses","___ so welcome at the hotel, I was reluctant to leave.",["Being made","Making","Having made","To make"],"Bị động, cùng lúc, chỉ lý do → Being + V3."],
+[5,"Participle clauses","___ up by a scratching sound, I found a rat trying to get into my backpack.",["Having been woken","Having woken","Waking","To wake"],"Bị động, xảy ra trước → Having been + V3."],
+[5,"Participle clauses","“Sold in Britain, the boots would have cost a lot more.” means:",["If they were sold in Britain, …","Because they sold in Britain, …","After selling in Britain, …","Although they were sold in Britain, …"],"Past participle chỉ điều kiện bị động = If + passive."],
+[5,"Participle clauses","The government introduced new laws, ___ emissions by 20%.",["reducing","reduced","being reduced","having been reduced"],"V-ing chỉ kết quả, chủ động (luật làm giảm khí thải)."],
+[5,"Participle clauses","Arriving early, I had time to look around. “Arriving early” replaces:",["Because I arrived early","Although I arrived early","If I am arrived early","Before I arrived early"],"Present participle có thể thay cho mệnh đề lý do (because/since/as)."],
+[5,"Unit 4–5 Bridge","In “Recycling plastic helps the planet”, the word “Recycling” is a…",["gerund (acts as a noun – subject)","present participle clause","past participle","bare infinitive"],"V-ing đứng làm chủ ngữ → Gerund (Unit 4)."],
+[5,"Unit 4–5 Bridge","In “Walking along the beach, we saw litter everywhere”, “Walking…” is a…",["present participle clause","gerund (subject)","full infinitive","perfect participle"],"Rút gọn mệnh đề chủ động cùng chủ ngữ → present participle (Unit 5)."],
+[5,"Idioms","Planting a few trees is just ___ unless industries cut emissions.",["a drop in the ocean","the tip of the iceberg","in hot water","the calm before the storm"],"a drop in the ocean = muối bỏ bể."],
+[5,"Idioms","The company landed ___ for releasing untreated waste into the river.",["in hot water","in the ocean","on the same page","hand in hand"],"in hot water = gặp rắc rối."],
+[5,"Idioms","Rising summer heatwaves are merely ___ of global warming.",["the tip of the iceberg","a drop in the ocean","a race against time","common ground"],"the tip of the iceberg = phần nổi của tảng băng chìm."],
+[5,"Idioms","After the heavy fine, the factory promised to ___.",["turn over a new leaf","weather the storm","go hand in hand","break the ice"],"turn over a new leaf = thay đổi tích cực."],
+[4,"Idioms","The teacher organised a fun game to ___ with the new students.",["break the ice","bridge the gap","pull together","go green"],"break the ice = phá tan ngại ngùng."],
+[4,"Idioms","The member countries do not always ___ on every economic issue.",["see eye to eye","join forces","go green","weather the storm"],"see eye to eye = đồng quan điểm."],
+[4,"Idioms","Regional peace and economic development always ___.",["go hand in hand","pull together","find common ground","break the ice"],"go hand in hand (with sth) = đi đôi với nhau."],
+[4,"Idioms","Despite cultural differences, the delegates quickly ___ during the summit.",["found common ground","went green","turned over a new leaf","were in hot water"],"find common ground = tìm tiếng nói chung."],
+[4,"Collocations","The club put out a call ___ volunteers.",["for","to","on","with"],"put out a call for sth = kêu gọi."],
+[4,"Collocations","Students can ___ forward a proposal to the principal.",["put","take","make","give"],"put forward a proposal = đưa ra đề xuất."],
+[4,"Collocations","She only confides ___ her best friend.",["in","to","with","on"],"confide in sb = tâm sự với ai."],
+[4,"Collocations","He spoke ___ behalf of the whole class.",["on","in","for","by"],"on behalf of sb = thay mặt ai."],
+[5,"Collocations","Every country must ___ emissions to limit global warming.",["cut","make","do","take"],"cut / reduce / limit emissions."],
+[5,"Collocations","Human activities ___ a huge impact on the climate.",["have","do","take","give"],"have / make an impact on sth."],
+[5,"Collocations","If we don't stop, we will use all the fossil fuels ___.",["up","down","out of","off"],"use sth up = dùng cạn kiệt."],
+[4,"Vocabulary","“Lay the groundwork for” means…",["đặt nền móng cho","đi tham quan","phát sóng trực tiếp","thách thức định kiến"],"lay the groundwork for = đặt nền móng cho điều gì."],
+[5,"Vocabulary","“Carbon footprint” is…",["the total amount of greenhouse gases generated by our actions","black powder produced when coal is burnt","land where waste is buried","food grown without chemicals"],"Định nghĩa trong Key Terms Unit 5."],
+[5,"Vocabulary","Black powder produced when wood or coal is burnt is called…",["soot","landfill","fossil","substance"],"soot = bồ hóng, muội than."],
+[4,"Reading skill","In Matching Information tasks, you should…",["check that the whole meaning matches, not just one familiar word","choose the paragraph with the same word as the statement","read only the first sentence of each paragraph","skip the key idea and guess"],"Exam tip: toàn bộ ý nghĩa phải khớp, không chọn chỉ vì trùng một từ."]
+];
+
+/* ================= HELPERS ================= */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const shuf=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const store={get(k,d){try{const v=localStorage.getItem("ot45_"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem("ot45_"+k,JSON.stringify(v))}catch(e){}}};
+const spkBtn=t=>`<button class="spk" data-say="${esc(t)}" aria-label="Nghe phát âm" title="Nghe"><svg><use href="#i-spk"/></svg></button>`;
+const uPill=u=>`<span class="pill ${u==5?"u5":""}">Unit ${u}</span>`;
+
+/* ================= SPEECH ================= */
+const synth=window.speechSynthesis;let voices=[];
+function loadVoices(){if(!synth)return;voices=synth.getVoices().filter(v=>/^en/i.test(v.lang));const sel=$("#voice");const keep=sel.value;
+sel.innerHTML=voices.length?voices.map((v,i)=>`<option value="${i}">${esc(v.name)} (${esc(v.lang)})</option>`).join(""):'<option value="">Giọng mặc định (en-US)</option>';
+if(keep)sel.value=keep;else{const i=voices.findIndex(v=>/en-US/i.test(v.lang));if(i>=0)sel.value=i}}
+if(synth){loadVoices();synth.onvoiceschanged=loadVoices}else{$("#voice").innerHTML='<option>Trình duyệt không hỗ trợ đọc</option>'}
+function say(t){if(!synth)return;try{synth.cancel();const u=new SpeechSynthesisUtterance(t);const v=voices[$("#voice").value];if(v){u.voice=v;u.lang=v.lang}else u.lang="en-US";u.rate=+$("#rate").value;synth.speak(u)}catch(e){}}
+$("#rate").addEventListener("input",e=>$("#rateV").textContent=e.target.value+"×");
+document.addEventListener("click",e=>{const b=e.target.closest("[data-say]");if(b){e.stopPropagation();say(b.dataset.say)}},true);
+
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+$("#srNote").textContent=SR?"Bấm nút micro rồi đọc to câu – máy sẽ chấm độ khớp.":"Trình duyệt này chưa hỗ trợ nhận giọng nói (hãy dùng Chrome). Bạn vẫn nghe – nhắc lại – tự chấm được.";
+const norm=s=>s.toLowerCase().replace(/[^a-z0-9' ]/g," ").split(/\s+/).filter(Boolean);
+function listen(target,out){
+ if(!SR){out.innerHTML='<span class="muted">Hãy nghe mẫu, nói to theo, rồi bấm lại nút loa để so sánh.</span>';return}
+ let r;try{r=new SR()}catch(e){out.textContent="Không khởi động được micro.";return}
+ r.lang="en-US";r.interimResults=false;r.maxAlternatives=1;
+ out.innerHTML='<span class="ok-t">Đang nghe… hãy đọc to.</span>';
+ r.onresult=ev=>{const said=ev.results[0][0].transcript;const a=norm(target),b=norm(said);const hit=a.filter(w=>b.includes(w)).length;const p=Math.round(hit/Math.max(a.length,1)*100);
+  const words=a.map(w=>b.includes(w)?`<span class="ok-t">${esc(w)}</span>`:`<span class="bad-t">${esc(w)}</span>`).join(" ");
+  out.innerHTML=`<b>${p}% khớp</b> ${p>=85?"– Tuyệt vời!":p>=60?"– Khá tốt, luyện thêm các từ màu đỏ.":"– Nghe lại mẫu và thử lần nữa nhé."}<br><span class="small">Máy nghe được: “${esc(said)}”</span><br><span class="small">${words}</span>`};
+ r.onerror=ev=>{out.innerHTML=`<span class="bad-t">Không dùng được micro</span> <span class="small muted">(${esc(ev.error)}). Khung xem có thể đang chặn micro – hãy mở trang trong Chrome ở tab riêng, hoặc luyện theo cách nghe – nhắc lại.</span>`};
+ try{r.start()}catch(e){out.textContent="Không khởi động được micro."}
+}
+
+/* ================= ROUTER ================= */
+const VIEWS=["home","learn","read","games","test","speak"];
+function route(){try{synth&&synth.cancel()}catch(e){}const h=location.hash.slice(1);const v=VIEWS.includes(h)?h:"home";$$(".view").forEach(x=>x.classList.toggle("on",x.id==="v-"+v));$$("#nav a").forEach(a=>a.classList.toggle("on",a.dataset.v===v));if(v==="home")stats();window.scrollTo(0,0)}
+addEventListener("hashchange",route);
+
+/* hero dots */
+$("#dots").innerHTML=Array.from({length:10},(_,i)=>{const a=i/10*Math.PI*2;const x=190+185*Math.cos(a),y=190+52*Math.sin(a);const r=-14*Math.PI/180;const dx=x-190,dy=y-190;
+ return `<circle cx="${(190+dx*Math.cos(r)-dy*Math.sin(r)).toFixed(1)}" cy="${(190+dx*Math.sin(r)+dy*Math.cos(r)).toFixed(1)}" r="7" fill="${i%2?"#ff8fd8":"#a8f0ff"}" stroke="#0a238f" stroke-width="2"/>`}).join("");
+function stats(){const known=store.get("known",[]).length;const best=store.get("best",null);const vb=store.get("vbest",0);
+ $("#stats").innerHTML=`<div class="stat"><b>${known}/${V.length}</b>thẻ đã thuộc</div><div class="stat"><b>${best==null?"—":best+"%"}</b>điểm test cao nhất</div><div class="stat"><b>${vb}</b>kỷ lục đua động từ</div>`}
+
+/* ================= GRAMMAR (detailed) ================= */
+const GR=[
+{id:"gerund",u:4,t:"Gerund (V-ing)",sub:"Danh động từ – V-ing đóng vai trò như một DANH TỪ",
+f:["V-ing + V (chủ ngữ)","S + V + V-ing (tân ngữ)","giới từ + V-ing"],
+intro:"Gerund là động từ thêm -ing nhưng dùng như một danh từ. Vì vậy nó đứng ở những vị trí của danh từ: làm chủ ngữ, làm tân ngữ, đứng sau giới từ, và sau một số động từ / cụm từ cố định.",
+p:[
+{h:"Làm chủ ngữ của câu",d:"V-ing đứng đầu câu, động từ chính chia số ít.",ex:[["[[Jogging]] is an activity enjoyed by the whole family.","Chạy bộ là hoạt động được cả gia đình yêu thích."],["[[Recycling]] plastic helps protect the environment.","Tái chế nhựa giúp bảo vệ môi trường."],["[[Learning]] about other ASEAN cultures is really eye-opening.","Tìm hiểu về các nền văn hóa ASEAN khác thật sự mở mang tầm mắt."]]},
+{h:"Làm tân ngữ (sau động từ)",d:"V-ing đứng sau động từ chính, là “cái” mà chủ ngữ thích / ghét / làm…",ex:[["I enjoy [[hiking]], especially in spring.","Tôi thích đi bộ đường dài, nhất là vào mùa xuân."],["She hates [[waiting]] in long queues.","Cô ấy ghét phải xếp hàng dài chờ đợi."]]},
+{h:"Sau giới từ (in, on, at, for, about, of, without…)",d:"Sau MỌI giới từ, động từ phải ở dạng V-ing.",ex:[["I insist on [[taking]] you out for dinner.","Tôi nhất định mời bạn đi ăn tối."],["Ken apologised for [[keeping]] us waiting.","Ken xin lỗi vì đã để chúng tôi phải chờ."],["We are interested in [[joining]] the ASEAN youth programme.","Chúng tôi muốn tham gia chương trình thanh niên ASEAN."]]},
+{h:"go + V-ing (hoạt động, thể thao)",d:"Dùng để nói về các hoạt động giải trí: go swimming, go shopping, go camping, go sightseeing…",ex:[["Marion goes [[walking]] every day.","Marion đi dạo mỗi ngày."],["Do your children go [[swimming]] every week?","Con bạn có đi bơi mỗi tuần không?"],["During the trip, the students went [[sightseeing]] in Hue.","Trong chuyến đi, các bạn học sinh đi tham quan Huế."]]},
+{h:"Sau các cụm từ cố định",d:"have difficulty (in), have trouble, it's pointless, it's no use, it's no good, it's (not) worth, there's no point (in).",ex:[["Julian has difficulty [[remembering]] people's names.","Julian gặp khó khăn trong việc nhớ tên người khác."],["It's no use [[asking]] him for help. He'll refuse.","Nhờ anh ta giúp cũng vô ích. Anh ta sẽ từ chối."],["It's not worth [[making]] a cake; we can buy one.","Không đáng để làm bánh; chúng ta có thể mua một cái."],["There's no point in [[arguing]] about it.","Tranh cãi về chuyện đó cũng chẳng ích gì."]]},
+{h:"Sau một số động từ",d:"Học thuộc nhóm động từ dưới đây (bấm vào từ để nghe):",chips:"GER",ex:[["Don't delay [[applying]] for that job.","Đừng chần chừ nộp đơn cho công việc đó."],["Do you feel like [[playing]] chess?","Bạn có muốn chơi cờ không?"],["The leader suggested [[launching]] a green initiative.","Trưởng nhóm đề xuất phát động một sáng kiến xanh."],["I'm looking forward to [[meeting]] the exchange students.","Tôi rất mong được gặp các bạn học sinh trao đổi."]]}
+],
+tip:["“look forward to”, “be used to”, “object to” → “to” ở đây là GIỚI TỪ, nên theo sau là V-ing: look forward to meeting (không phải to meet).","Phủ định của gerund: not + V-ing → Not having enough sleep is bad for you."],
+q:[["They enjoy ___ traditional games like tug of war.",["playing","to play","play"],"enjoy + V-ing."],["She is good at ___ problems.",["solving","to solve","solve"],"Sau giới từ “at” dùng V-ing."],["It's no good ___ about the past.",["worrying","to worry","worry"],"It's no good + V-ing."]]},
+
+{id:"toinf",u:4,t:"Full infinitive (to V)",sub:"Động từ nguyên mẫu có “to”",
+f:["to V (mục đích)","too + adj + to V","adj + enough + to V","adj + to V"],
+intro:"To V thường diễn tả mục đích, dự định hoặc phản ứng. Nó đi sau too / enough, sau một số tính từ, sau would prefer và sau một nhóm động từ cố định.",
+p:[
+{h:"Chỉ mục đích (để làm gì)",d:"Trả lời câu hỏi “Why?” – thay cho in order to / so as to.",ex:[["I'm going out [[to get]] a newspaper.","Tôi ra ngoài để mua tờ báo."],["She saved money [[to join]] the cultural exchange.","Cô ấy tiết kiệm tiền để tham gia buổi giao lưu văn hóa."]]},
+{h:"Sau too và enough",d:"too + adj/adv + to V: quá… đến nỗi không thể · adj/adv + enough + to V: đủ… để.",ex:[["It's too hot [[to walk]] to the park now.","Bây giờ trời quá nóng để đi bộ ra công viên."],["I didn't run fast enough [[to win]] the race.","Tôi chạy không đủ nhanh để thắng cuộc đua."],["She is old enough [[to vote]].","Cô ấy đủ tuổi để đi bầu cử."]]},
+{h:"Sau các tính từ chỉ cảm xúc / sự cần thiết",d:"delighted, glad, happy, pleased, sad, sorry, essential, important, necessary, vital…",ex:[["I was sorry [[to hear]] the sad news.","Tôi rất tiếc khi nghe tin buồn."],["“I'm delighted [[to meet]] you,” she said.","“Tôi rất vui được gặp bạn,” cô ấy nói."],["It's important [[to take]] some exercise every day.","Tập thể dục mỗi ngày là điều quan trọng."],["It is vital [[to reduce]] greenhouse gas emissions.","Việc giảm phát thải khí nhà kính là cực kỳ cần thiết."]]},
+{h:"Sau would prefer (diễn tả sự ưa thích)",d:"would prefer + to V (khác với would rather + V0).",ex:[["Alex would prefer [[to have]] the chocolate mousse.","Alex thích ăn món mousse sô-cô-la hơn."],["I'd prefer [[to cycle]] to school because it's eco-friendly.","Tôi thích đạp xe đến trường hơn vì nó thân thiện với môi trường."]]},
+{h:"Sau một số động từ",d:"Học thuộc nhóm động từ dưới đây (bấm vào từ để nghe):",chips:"INF",ex:[["We've decided [[to move]] house.","Chúng tôi đã quyết định chuyển nhà."],["Kerry would love [[to visit]] us next weekend.","Kerry rất muốn đến thăm chúng tôi vào cuối tuần tới."],["The students agreed [[to take]] part in the campaign.","Các bạn học sinh đồng ý tham gia chiến dịch."],["Mai refused [[to accept]] the stereotype.","Mai từ chối chấp nhận định kiến đó."]]}
+],
+tip:["Phủ định: not + to V → He decided not to go.","Mẹo nhớ: nhiều động từ + to V mang nghĩa hướng về TƯƠNG LAI (hope, plan, decide, promise, want…)."],
+q:[["They hope ___ the competition.",["to win","winning","win"],"hope + to V."],["The box is too heavy ___.",["to carry","carrying","carry"],"too + adj + to V."],["We went to the library ___ some books.",["to borrow","borrowing","borrow"],"to V chỉ mục đích."]]},
+
+{id:"bare",u:4,t:"Bare infinitive (V0)",sub:"Động từ nguyên mẫu KHÔNG “to”",
+f:["modal + V0","had better (not) + V0","would rather + V0 (than V0)"],
+intro:"V0 là động từ nguyên mẫu không có “to”. Trong chương trình Unit 4, cần nhớ 3 trường hợp: sau động từ khuyết thiếu, sau had better và sau would rather.",
+p:[
+{h:"Sau động từ khuyết thiếu (modal verbs)",d:"can, could, should, must, will, would, may, might…",ex:[["We can [[buy]] tickets for the tournament here.","Chúng ta có thể mua vé xem giải đấu ở đây."],["You shouldn't [[ask]] so many questions.","Bạn không nên hỏi nhiều câu như vậy."],["All countries must [[cut]] their emissions.","Tất cả các nước phải cắt giảm khí thải."]]},
+{h:"Sau had better (lời khuyên)",d:"had better (’d better) + V0: tốt hơn hết là nên… · Phủ định: had better not + V0.",ex:[["You had better [[get]] someone to help you decorate your bedroom.","Tốt hơn là bạn nên nhờ ai đó giúp trang trí phòng ngủ."],["You'd better not [[drop]] litter here.","Tốt hơn hết bạn đừng xả rác ở đây."]]},
+{h:"Sau would rather (sự ưa thích)",d:"would rather + V0 (+ than + V0): thích làm gì hơn.",ex:[["Ian would rather [[live]] in the city.","Ian thích sống ở thành phố hơn."],["I'd rather [[stay]] at home than [[go]] out tonight.","Tối nay tôi thích ở nhà hơn là ra ngoài."]]}
+],
+tip:["So sánh: would rather + V0 nhưng would prefer + to V.","Không bao giờ dùng “to” sau modal: ✗ must to go → ✓ must go."],
+q:[["You'd better ___ your homework now.",["do","to do","doing"],"had better + V0."],["I would rather ___ by bus.",["travel","to travel","travelling"],"would rather + V0."],["Students must ___ their phones in class.",["turn off","to turn off","turning off"],"modal + V0."]]},
+
+{id:"pres",u:5,t:"Present participle clause (V-ing)",sub:"Mệnh đề phân từ hiện tại – nghĩa CHỦ ĐỘNG",
+f:["V-ing …, S + V …","S + V …, V-ing …"],
+intro:"Dùng V-ing để rút gọn một mệnh đề có nghĩa CHỦ ĐỘNG. Điều kiện bắt buộc: hai mệnh đề phải có CÙNG chủ ngữ. Cách làm: bỏ liên từ + chủ ngữ, đổi động từ thành V-ing.",
+p:[
+{h:"Hành động xảy ra cùng lúc hoặc ngay trước hành động chính",d:"Thay cho when / while / after.",ex:[["[[Opening up]] my sleeping bag, I discovered a scorpion.","Khi mở túi ngủ ra, tôi phát hiện một con bọ cạp.","= When I opened up my sleeping bag, …"],["[[Hearing]] the news, she started to cry.","Nghe tin, cô ấy bật khóc.","= When she heard the news, …"]]},
+{h:"Thông tin nền (bối cảnh, trạng thái chung)",d:"Mô tả đặc điểm chung của chủ ngữ.",ex:[["[[Living]] mainly in warm climates, scorpions have existed for over 400 million years.","Sống chủ yếu ở vùng khí hậu ấm, bọ cạp đã tồn tại hơn 400 triệu năm."]]},
+{h:"Sau lời nói trực tiếp",d:"Cho biết người nói đang làm gì khi nói.",ex:[["“Wait for me here,” said Frank, [[running]] out of the house.","“Đợi tôi ở đây,” Frank nói rồi chạy ra khỏi nhà."]]},
+{h:"Lý do hoặc kết quả",d:"Thay cho because / since / as (lý do) hoặc so / and as a result (kết quả).",ex:[["[[Arriving]] in Amalfi early in the afternoon, I had time to look around the town.","Vì đến Amalfi từ đầu giờ chiều, tôi có thời gian dạo quanh thị trấn.","= Because I arrived in Amalfi early …"],["[[Knowing]] that plastic harms the ocean, we stopped using plastic bags.","Biết rằng nhựa gây hại cho đại dương, chúng tôi ngừng dùng túi nhựa.","= Because we knew …"],["The factory released toxic waste, [[killing]] thousands of fish.","Nhà máy thải chất độc, khiến hàng nghìn con cá chết.","(kết quả)"]]}
+],
+tip:["Hai vế phải cùng chủ ngữ. ✗ Walking home, the rain started. (mưa không thể đi bộ) → ✓ Walking home, I got caught in the rain.","Phủ định: Not + V-ing → Not knowing the way, we asked a local person."],
+q:[["___ the door, he saw a parcel on the floor.",["Opening","Opened","To open"],"Anh ấy tự mở cửa → chủ động → V-ing."],["“See you later,” she said, ___ out of the room.",["walking","walked","to walk"],"Sau lời nói trực tiếp → V-ing."],["___ in the countryside, my grandparents grow their own vegetables.",["Living","Lived","Being lived"],"Thông tin nền, chủ động → V-ing."]]},
+
+{id:"past",u:5,t:"Past participle clause (V3/-ed)",sub:"Mệnh đề phân từ quá khứ – nghĩa BỊ ĐỘNG",
+f:["V3/-ed …, S + V …"],
+intro:"Dùng V3/-ed để rút gọn một mệnh đề BỊ ĐỘNG (chủ ngữ “bị / được” làm gì). Cách làm: bỏ liên từ + chủ ngữ + to be, giữ lại V3.",
+p:[
+{h:"Lý do (bị động)",d:"Thay cho because / since / as + mệnh đề bị động.",ex:[["[[Made]] from the softest leather imaginable, they are as comfortable as a pair of slippers.","Được làm từ loại da mềm nhất, chúng thoải mái như một đôi dép đi trong nhà.","= Because they are made from …"],["[[Shocked]] by the photos of melting ice, the students decided to go green.","Bị sốc vì những bức ảnh băng tan, các bạn học sinh quyết định sống xanh.","= Because they were shocked …"]]},
+{h:"Điều kiện (bị động)",d:"Thay cho if + mệnh đề bị động.",ex:[["[[Sold]] in Britain, the boots would have cost a lot more.","Nếu được bán ở Anh, đôi bốt sẽ đắt hơn nhiều.","= If they were sold in Britain, …"],["[[Used]] wisely, renewable energy can reduce our carbon footprint.","Nếu được sử dụng hợp lý, năng lượng tái tạo có thể giảm dấu chân carbon.","= If it is used wisely, …"]]}
+],
+tip:["Phân biệt nhanh: chủ ngữ TỰ làm → V-ing; chủ ngữ BỊ / ĐƯỢC làm → V3.","Ví dụ: Writing the letter, she… (cô ấy viết thư) / Written in English, the letter… (lá thư được viết)."],
+q:[["___ in 2010, the eco-park attracts many visitors.",["Opened","Opening","Having opened"],"Công viên “được mở” → bị động → V3."],["___ with care, these plants can live for years.",["Treated","Treating","To treat"],"Cây “được chăm sóc” → điều kiện bị động → V3."]]},
+
+{id:"perfect",u:5,t:"Perfect & passive participles",sub:"Having + V3 · Being + V3 · Having been + V3",
+f:["Having + V3 (chủ động, xong trước)","Being + V3 (bị động, cùng lúc)","Having been + V3 (bị động, xong trước)"],
+intro:"Ba dạng này giúp nói rõ hơn về THỜI ĐIỂM (xảy ra trước hay cùng lúc) và THỂ (chủ động hay bị động) của hành động trong mệnh đề phân từ.",
+p:[
+{h:"Perfect participle: Having + V3",d:"Nhấn mạnh hành động đã HOÀN TẤT trước khi hành động chính bắt đầu (chủ động).",ex:[["[[Having fallen]] over a number of times, I was feeling thoroughly miserable.","Sau khi bị ngã nhiều lần, tôi cảm thấy vô cùng khổ sở.","= Because I had fallen over …"],["[[Having climbed]] to the top of the hill, I could see all the way to the Mediterranean.","Leo lên tới đỉnh đồi rồi, tôi có thể nhìn thấy tận Địa Trung Hải.","(so với Climbing to the top… – nghĩa gần giống, ít nhấn mạnh sự hoàn tất)"],["[[Having finished]] the report, she submitted it to the teacher.","Làm xong bản báo cáo, cô ấy nộp cho giáo viên."]]},
+{h:"Passive present participle: Being + V3",d:"Lý do mang nghĩa bị động, xảy ra CÙNG LÚC với hành động chính.",ex:[["[[Being made]] so welcome at the hotel, I was reluctant to leave.","Vì được đón tiếp nồng hậu ở khách sạn, tôi không muốn rời đi.","= Because I was made so welcome …"],["[[Being invited]] to the ASEAN summit, the students felt very proud.","Được mời tới hội nghị ASEAN, các bạn học sinh cảm thấy rất tự hào."]]},
+{h:"Passive perfect participle: Having been + V3",d:"Hành động bị động đã xảy ra TRƯỚC hành động chính.",ex:[["[[Having been woken up]] by a scratching sound, I found a large rat trying to get into my backpack.","Bị đánh thức bởi tiếng cào, tôi thấy một con chuột to đang cố chui vào ba lô.","= After I had been woken up …"],["[[Having been warned]] about the storm, the villagers moved to a safer place.","Đã được cảnh báo về cơn bão, dân làng chuyển đến nơi an toàn hơn."]]}
+],
+table:[["V-ing","Chủ động","Cùng lúc / ngay trước"],["V3/-ed","Bị động","—"],["Having + V3","Chủ động","Xong TRƯỚC"],["Being + V3","Bị động","Cùng lúc"],["Having been + V3","Bị động","Xong TRƯỚC"]],
+tip:["Hỏi 2 câu: (1) Chủ ngữ tự làm hay bị làm? (2) Hành động xảy ra trước hay cùng lúc? → chọn đúng dạng trong bảng."],
+q:[["___ all the money, he couldn't buy a ticket home.",["Having spent","Being spent","Having been spent"],"Anh ấy tự tiêu (chủ động), đã xong trước → Having + V3."],["___ by the teacher, the students stopped talking.",["Having been warned","Having warned","Warning"],"Học sinh “bị nhắc nhở” trước → Having been + V3."],["___ so kindly, I wanted to return the favour.",["Being treated","Treating","Having treated"],"“Được đối xử” (bị động) cùng lúc → Being + V3."]]},
+
+{id:"bridge",u:5,t:"So sánh: Gerund (U4) và Participle (U5)",sub:"Cùng là V-ing nhưng vai trò khác nhau",
+f:["Gerund = DANH TỪ","Participle = rút gọn MỆNH ĐỀ"],
+intro:"Đây là phần dễ nhầm nhất trong đề thi. Gerund là một danh từ nằm TRONG câu; present participle là cả một mệnh đề rút gọn ĐỨNG CẠNH mệnh đề chính, ngăn cách bằng dấu phẩy.",
+p:[
+{h:"Gerund (Unit 4) – làm danh từ",d:"Đóng vai chủ ngữ / tân ngữ; KHÔNG có dấu phẩy tách khỏi động từ chính.",ex:[["[[Jogging]] is good for you.","Chạy bộ tốt cho bạn. (Jogging là chủ ngữ)"],["I enjoy [[hiking]].","Tôi thích đi bộ đường dài. (hiking là tân ngữ)"]]},
+{h:"Present participle (Unit 5) – rút gọn mệnh đề chủ động",d:"Có dấu phẩy, phía sau là một câu hoàn chỉnh có chủ ngữ riêng.",ex:[["[[Opening]] my bag, I found a scorpion.","Mở túi ra, tôi thấy một con bọ cạp. (sau dấu phẩy có S + V: I found)"],["[[Arriving]] early, I had time to look around.","Đến sớm nên tôi có thời gian dạo quanh."]]},
+{h:"V3 / Having + V3 (Unit 5)",d:"Rút gọn mệnh đề bị động hoặc hành động đã hoàn tất trước.",ex:[["[[Made]] from soft leather, they are comfy.","Được làm từ da mềm, chúng rất thoải mái."],["[[Having climbed]] the hill, I saw the sea.","Leo xong ngọn đồi, tôi nhìn thấy biển."]]}
+],
+tip:["Mẹo thử: che phần V-ing đi. Nếu phần còn lại vẫn là một câu đủ S + V → đó là mệnh đề phân từ. Nếu câu bị thiếu chủ ngữ / tân ngữ → V-ing là Gerund."],
+q:[["“Swimming in the sea is fun.” – “Swimming” là…",["Gerund (chủ ngữ)","Present participle","Past participle"],"Che “Swimming in the sea” đi → câu thiếu chủ ngữ → Gerund."],["“Swimming in the sea, we saw a dolphin.” – “Swimming…” là…",["Present participle clause","Gerund (chủ ngữ)","Bare infinitive"],"Che phần đầu → “we saw a dolphin” vẫn đủ câu → mệnh đề phân từ."]]}
+];
+let gi=0;
+const hl=s=>esc(s).replace(/\[\[(.+?)\]\]/g,"<mark>$1</mark>");
+const plain=s=>s.replace(/\[\[|\]\]/g,"");
+function gramView(){return `<div class="gwrap"><aside class="gnav" id="gnav">${GR.map((g,i)=>`<button data-gi="${i}" class="${i===gi?"on":""}"><span class="pill ${g.u==5?"u5":""}">U${g.u}</span> ${esc(g.t)}</button>`).join("")}</aside><div id="gbody"></div></div>`}
+function gramShow(i){gi=i;const g=GR[i];$$("#gnav button").forEach((b,k)=>b.classList.toggle("on",k===i));const ab=$("#gnav .on");if(ab&&innerWidth<=860)ab.parentNode.scrollTo({left:ab.offsetLeft-16,behavior:"smooth"});
+ const chipsOf=n=>`<div class="chips" style="margin:10px 0 12px">${(n==="GER"?GER:INF).map(x=>`<button class="chip" data-say="${esc(x)}">${esc(x)}</button>`).join("")}</div>`;
+ $("#gbody").innerHTML=`<div class="card ghead"><div class="row">${uPill(g.u)}<span class="muted small">Mục ${i+1}/${GR.length}</span></div><h2 style="margin:8px 0 4px">${esc(g.t)}</h2><p class="muted" style="font-weight:600">${esc(g.sub)}</p>
+ <div class="formula"><span class="flab">Công thức</span>${g.f.map(x=>`<code>${esc(x)}</code>`).join("")}</div><p style="margin:14px 0 0">${esc(g.intro)}</p></div>
+ ${g.p.map((p,k)=>`<section class="pt"><div class="pn">${k+1}</div><div><h3>${esc(p.h)}</h3><p class="muted">${esc(p.d)}</p>${p.chips?chipsOf(p.chips):""}
+ <div class="exs">${p.ex.map(e=>`<div class="exr"><div class="t"><div class="en">${hl(e[0])}</div><div class="vi">${esc(e[1])}</div>${e[2]?`<div class="eq">${esc(e[2])}</div>`:""}</div>${spkBtn(plain(e[0]))}</div>`).join("")}</div></div></section>`).join("")}
+ ${g.table?`<div class="card" style="margin-top:18px"><h3>Bảng tóm tắt</h3><div class="scroll"><table class="stack"><thead><tr><th>Dạng</th><th>Thể</th><th>Thời điểm so với hành động chính</th></tr></thead><tbody>${g.table.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div></div>`:""}
+ <div class="note"><b>Lưu ý & mẹo</b><ul class="clean" style="margin-top:6px">${g.tip.map(t=>`<li>${esc(t)}</li>`).join("")}</ul></div>
+ <div class="card" style="margin-top:18px"><h3>Kiểm tra nhanh</h3><div class="list" id="gq">${g.q.map((q,k)=>{const o=shuf(q[1]);return `<div class="gqi" data-a="${esc(q[1][0])}" data-e="${esc(q[2])}"><b>${k+1}. ${esc(q[0])}</b><div class="row" style="margin-top:8px">${o.map(x=>`<button class="opt gqo" data-v="${esc(x)}">${esc(x)}</button>`).join("")}</div><div class="small gqf"></div></div>`}).join("")}</div></div>
+ <div class="row" style="justify-content:space-between;margin-top:18px"><button class="btn g" id="gPrev" ${i===0?"hidden":""}>← ${i>0?esc(GR[i-1].t):""}</button><button class="btn" id="gNext" ${i===GR.length-1?"hidden":""}>${i<GR.length-1?esc(GR[i+1].t):""} →</button></div>`;
+ $("#gPrev").onclick=()=>{gramShow(gi-1);$("#lbody").scrollIntoView({block:"start"})};$("#gNext").onclick=()=>{gramShow(gi+1);$("#lbody").scrollIntoView({block:"start"})};
+ $("#gq").onclick=e=>{const b=e.target.closest(".gqo");if(!b)return;const w=b.closest(".gqi");if(w.dataset.done)return;w.dataset.done=1;const a=w.dataset.a;
+  w.querySelectorAll(".gqo").forEach(x=>{if(x.dataset.v===a)x.classList.add("ok");else if(x===b)x.classList.add("bad")});
+  w.querySelector(".gqf").innerHTML=(b.dataset.v===a?'<span class="ok-t">Đúng rồi!</span> ':'<span class="bad-t">Chưa đúng.</span> ')+esc(w.dataset.e)}}
+function gramInit(){$("#gnav").onclick=e=>{const b=e.target.closest("[data-gi]");if(b)gramShow(+b.dataset.gi)};gramShow(gi)}
+
+/* ================= LEARN ================= */
+let deck=[],di=0,dfil="all";
+const L={
+cards(){const known=store.get("known",[]);
+ return `<div class="row" style="margin-bottom:14px"><select id="dFil" aria-label="Lọc"><option value="all">Tất cả (${V.length} từ)</option><option value="4">Unit 4</option><option value="5">Unit 5</option><option value="todo">Chưa thuộc</option></select><button class="btn g" id="dShuf">Trộn thẻ</button><span class="muted small">Bấm vào thẻ để lật · phím ← → để chuyển</span></div>
+ <div class="deck"><div><div class="flip" id="flip" tabindex="0" role="button" aria-label="Lật thẻ"><div class="fi"><div class="face front" id="fFront"></div><div class="face back" id="fBack"></div></div></div>
+ <div class="row" style="justify-content:center;margin-top:14px"><button class="btn g" id="dPrev">← Trước</button><b id="dPos"></b><button class="btn g" id="dNext">Sau →</button><button class="btn o" id="dKnow"></button></div></div>
+ <div class="card"><h3>Tiến độ</h3><div class="bar"><i id="dBar"></i></div><p class="muted small" id="dTxt" style="margin-top:8px"></p><p class="small">Mẹo: nói to từ và câu ví dụ mỗi lần lật thẻ, sau đó vào mục <a href="#games">Trò chơi</a> để kiểm tra lại trí nhớ.</p></div></div>
+ <h3 style="margin-top:28px">Danh sách từ vựng</h3><input type="search" id="vSearch" placeholder="Tìm từ hoặc nghĩa…" style="width:100%;max-width:420px;margin-bottom:12px">
+ <div class="list" id="vList"></div>`},
+wf(){const t=(rows,u)=>`<h3 style="margin-top:8px">${uPill(u)} Word family</h3><div class="scroll"><table class="stack"><thead><tr><th>Noun (n)</th><th>Verb (v)</th><th>Adjective (adj)</th><th>Adverb (adv)</th></tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+ return `<div class="cols" style="margin-bottom:22px"><div class="card"><h3>Bước 1 – Xác định vị trí cần loại từ gì</h3><ul class="clean">
+<li><b>Danh từ (N)</b>: sau a/an/the, tính từ sở hữu (my, her…), tính từ; làm chủ ngữ / tân ngữ → <i>raise <mark>awareness</mark></i></li>
+<li><b>Động từ (V)</b>: sau chủ ngữ, sau modal / to → <i>Factories <mark>emit</mark> CO2.</i></li>
+<li><b>Tính từ (adj)</b>: trước danh từ, sau be / become / seem / keep → <i><mark>renewable</mark> energy</i></li>
+<li><b>Trạng từ (adv)</b>: bổ nghĩa cho động từ, tính từ hoặc cả câu → <i>develop <mark>sustainably</mark></i></li></ul></div>
+<div class="card"><h3>Bước 2 – Nhận biết qua đuôi từ</h3><div class="scroll"><table><thead><tr><th>Loại từ</th><th>Đuôi thường gặp</th><th>Ví dụ trong bài</th></tr></thead><tbody>
+<tr><td>Danh từ</td><td>-tion, -sion, -ment, -ness, -ity, -ship, -ance, -er/-or, -ant</td><td>promotion, emission, arrangement, awareness, disability, leadership, contributor, pollutant</td></tr>
+<tr><td>Động từ</td><td>-ize, -ate, -en, de-</td><td>organize, fossilize, deforest</td></tr>
+<tr><td>Tính từ</td><td>-al, -ful, -able, -ive, -ory, -ed, -ing, -ial</td><td>promotional, impactful, renewable, representative, contributory, polluted, leading, substantial</td></tr>
+<tr><td>Trạng từ</td><td>-ly</td><td>relatively, consequently, sustainably</td></tr>
+<tr><td>Trái nghĩa</td><td>un-, dis-, im-, in-, non-</td><td>unaware, disorganized, imbalance, insubstantial, non-renewable</td></tr></tbody></table></div></div></div>
+<p class="muted">Dấu “≠” là từ trái nghĩa. Bấm vào bảng và luyện đọc to từng họ từ.</p>${t(WF4,4)}<div style="height:24px"></div>${t(WF5,5)}`},
+idioms(){return `<p class="muted" style="max-width:70ch">Unit 4: thành ngữ về hợp tác, đoàn kết, giao tiếp. Unit 5: thành ngữ về môi trường, khí hậu và sự cấp bách. Bấm nút loa để nghe cả thành ngữ và câu ví dụ.</p><div class="row" style="margin-bottom:14px"><select id="iFil"><option value="all">Tất cả 16 idioms</option><option value="4">Unit 4 – Cooperation & Unity</option><option value="5">Unit 5 – Environment & Urgency</option></select></div><div class="grid" id="iGrid"></div>`},
+col(){return `<p class="muted" style="max-width:70ch">Collocation là những cụm từ hay đi cùng nhau. Học theo cụm (không học từ đơn lẻ) để làm tốt câu hỏi chọn động từ / giới từ phù hợp. Dấu “/” nghĩa là có thể thay thế nhau.</p><div class="cols">${COL.map(c=>`<div class="card"><div class="row" style="margin-bottom:8px">${uPill(c[0])}<h3 style="margin:0">${esc(c[1])}</h3></div><ul class="clean">${c[2].map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}</div>`},
+gram(){return gramView()},
+skill(){return `<div class="cols"><div class="card"><h3>A. Reading – Matching information (3 bước)</h3>
+ <div class="rule"><b>Bước 1</b> — Xác định ý chính (key idea) của từng câu.</div>
+ <div class="rule"><b>Bước 2</b> — Dự đoán từ đồng nghĩa / cách diễn đạt khác<div class="ex">change the way young people perceive → reconsider cultural stereotypes; societies other than their own → different traditions</div></div>
+ <div class="rule"><b>Bước 3</b> — Đọc lướt các đoạn và kiểm tra nghĩa trong ngữ cảnh.</div>
+ <p class="fb small"><b>Mẹo thi:</b> toàn bộ ý nghĩa phải khớp. Đừng chọn đoạn chỉ vì có một từ quen thuộc.</p>
+ <h3 style="margin-top:20px">Trò chơi dân gian (Cultural corner)</h3><div class="chips">${["Tug of war","Stilt walking","Blind man's buff","Swing festival","Sack race","Pot breaking","Spinning tops"].map(x=>`<button class="chip" data-say="${esc(x)}">${esc(x)}</button>`).join("")}</div>
+ <p class="small muted" style="margin-top:8px">kéo co · đi cà kheo · bịt mắt bắt dê · hội đu · nhảy bao bố · đập niêu · đánh quay</p></div>
+ <div class="card"><h3>B. Thuyết trình về một tổ chức ASEAN</h3><div class="list">${PRES.map(p=>`<div class="li"><div class="t"><b>${esc(p[0])}</b><br>${esc(p[1])}</div>${spkBtn(p[1].replace(/…/g,""))}</div>`).join("")}</div>
+ <p class="small" style="margin-top:12px">Luyện nói cả bài mẫu ở mục <a href="#speak">Luyện nói → Thuyết trình ASEAN</a>.</p></div></div>`}
+};
+function learn(t){$$("#ltabs button").forEach(b=>b.classList.toggle("on",b.dataset.t===t));$("#lbody").innerHTML=L[t]();
+ if(t==="cards"){$("#dFil").value=dfil;buildDeck();
+  $("#dFil").onchange=e=>{dfil=e.target.value;buildDeck()};$("#dShuf").onclick=()=>{deck=shuf(deck);di=0;showCard()};
+  $("#dPrev").onclick=()=>{di=(di-1+deck.length)%deck.length;showCard()};$("#dNext").onclick=()=>{di=(di+1)%deck.length;showCard()};
+  $("#flip").onclick=()=>$("#flip").classList.toggle("on");$("#flip").onkeydown=e=>{if(e.key===" "||e.key==="Enter"){e.preventDefault();$("#flip").classList.toggle("on")}};
+  $("#dKnow").onclick=()=>{if(!deck.length)return;const w=deck[di][0];let k=store.get("known",[]);k=k.includes(w)?k.filter(x=>x!==w):[...k,w];store.set("known",k);showCard();vList()};
+  $("#vSearch").oninput=vList;vList()}
+ if(t==="gram")gramInit();
+ if(t==="idioms"){const f=()=>{const u=$("#iFil").value;$("#iGrid").innerHTML=ID.filter(i=>u==="all"||i[4]==u).map(i=>`<div class="card"><div class="row" style="justify-content:space-between">${uPill(i[4])}${spkBtn(i[0]+". "+i[3])}</div><h3 style="margin-top:10px;color:var(--blue2)">${esc(i[0])}</h3><p><b>${esc(i[1])}</b><br><span class="muted small">${esc(i[2])}</span></p><p class="ex small" style="margin:0">${esc(i[3])}</p></div>`).join("")};$("#iFil").onchange=f;f()}
+}
+function buildDeck(){const k=store.get("known",[]);deck=V.filter(v=>dfil==="all"||(dfil==="todo"?!k.includes(v[0]):v[3]==dfil));di=0;showCard()}
+function showCard(){const k=store.get("known",[]);$("#flip").classList.remove("on");
+ if(!deck.length){$("#fFront").innerHTML='<div class="w">Bạn đã thuộc hết!</div><div class="hint">Chọn bộ lọc khác để ôn lại.</div>';$("#fBack").innerHTML="";$("#dPos").textContent="0/0";$("#dKnow").textContent="—"}
+ else{const c=deck[di];$("#fFront").innerHTML=`<span class="pill" style="margin-bottom:12px">Unit ${c[3]}</span><div class="w">${esc(c[0])}</div>${spkBtn(c[0])}<div class="hint">Bấm để xem nghĩa</div>`;
+ $("#fBack").innerHTML=`<div class="w">${esc(c[1])}</div><p class="ex" style="margin-top:12px">${esc(c[2])}</p>${spkBtn(c[2])}`;
+ $("#dPos").textContent=`${di+1}/${deck.length}`;$("#dKnow").textContent=k.includes(c[0])?"Bỏ đánh dấu":"Đã thuộc ✓"}
+ const n=k.length;$("#dBar").style.width=(n/V.length*100)+"%";$("#dTxt").textContent=`Đã thuộc ${n}/${V.length} từ. Dữ liệu lưu trên trình duyệt này.`}
+function vList(){const q=($("#vSearch").value||"").toLowerCase();const k=store.get("known",[]);
+ $("#vList").innerHTML=V.filter(v=>(v[0]+" "+v[1]).toLowerCase().includes(q)).map(v=>`<div class="li"><div class="t">${uPill(v[3])} <b>${esc(v[0])}</b> — ${esc(v[1])} ${k.includes(v[0])?'<span class="ok-t small">· đã thuộc</span>':""}<br><span class="ex small">${esc(v[2])}</span></div>${spkBtn(v[0])}</div>`).join("")||'<p class="muted">Không tìm thấy từ nào.</p>'}
+$("#ltabs").onclick=e=>{const b=e.target.closest("button");if(b)learn(b.dataset.t)};
+document.addEventListener("keydown",e=>{if(!$("#v-learn").classList.contains("on")||!$("#flip")||/INPUT|SELECT/.test(document.activeElement.tagName))return;if(e.key==="ArrowRight")$("#dNext").click();if(e.key==="ArrowLeft")$("#dPrev").click()});
+
+/* ================= READING (exam style, adapted from reputable sources) ================= */
+const RD=[
+{u:4,t:"ASEAN: A Growing Regional Family",
+src:[["ASEAN Secretariat – About ASEAN","https://asean.org/2021/11/09/"],["ASEAN – Timor-Leste admitted into ASEAN","https://asean.org/forging-a-new-era-timor-leste-admitted-into-asean/"],["Asian Development Bank – Timor-Leste joins ASEAN","https://seads.adb.org/news/timor-leste-joins-asean"]],
+text:"The Association of Southeast Asian Nations, better known as ASEAN, was set up on 8 August 1967 in Bangkok, Thailand. On that day, five countries – Indonesia, Malaysia, the Philippines, Singapore and Thailand – signed a short document known as the Bangkok Declaration. Their main goals were to speed up economic growth and to keep peace and stability in a region that had suffered from war and conflict. Over the next three decades, the group slowly expanded. Brunei joined in 1984, Viet Nam became a member on 28 July 1995, Laos and Myanmar followed in 1997, and Cambodia completed the family of ten in 1999. For many years, Timor-Leste was the only Southeast Asian country outside the group. After applying in 2011 and being given observer status in 2022, it was finally admitted as the eleventh member on 26 October 2025, during the ASEAN Summit in Kuala Lumpur. It was the first time in 26 years that ASEAN had welcomed a new member. Today, ASEAN's motto, “One Vision, One Identity, One Community”, reflects its aim of bringing very different nations closer together. Member states cooperate in many areas, from trade and tourism to education and disaster relief. Although they do not always agree, they prefer to solve problems through quiet discussion and consensus rather than open confrontation.",
+gl:[["set up","thành lập"],["expand","mở rộng"],["observer status","tư cách quan sát viên"],["admit","kết nạp"],["motto","khẩu hiệu"],["consensus","sự đồng thuận"],["confrontation","sự đối đầu"]],
+q:[["What is the passage mainly about?",["The history and growth of ASEAN","The economy of Thailand","Problems between ASEAN members","The life of people in Timor-Leste"],"Bài nói về sự ra đời và quá trình mở rộng của ASEAN."],
+["Which country was NOT a founding member of ASEAN?",["Viet Nam","Indonesia","Singapore","the Philippines"],"Viet Nam gia nhập năm 1995; năm nước sáng lập là Indonesia, Malaysia, Philippines, Singapore, Thailand."],
+["The word “admitted” in the passage is closest in meaning to…",["accepted","refused","visited","invited"],"admit (a member) = kết nạp, chấp nhận vào."],
+["According to the passage, when did Timor-Leste receive observer status?",["In 2022","In 2011","In 1999","In 2025"],"“After applying in 2011 and being given observer status in 2022…”."],
+["Which of the following is TRUE according to the passage?",["ASEAN members usually try to solve problems through discussion.","Cambodia joined ASEAN before Viet Nam.","Timor-Leste became a member in 2011.","ASEAN only cooperates in trade."],"Câu cuối bài: họ ưu tiên thảo luận và đồng thuận."]]},
+
+{u:4,t:"Tug of War: A Game That Unites Nations",
+src:[["UNESCO – Decision 10.COM 10.B.12: Tugging rituals and games","https://ich.unesco.org/en/decisions/10.COM/10.B.12"],["Cổng TTĐT Chính phủ – Tug of war becomes Intangible Cultural Heritage of Humanity","https://en.baochinhphu.vn/print/tug-of-war-becomes-intangible-cultural-heritage-of-humanity-11124739.htm"],["Philippine Department of Foreign Affairs – UNESCO recognizes tugging ritual","https://dfa.gov.ph/news-about-sfa/8103-unesco-recognizes-philippine-tugging-ritual-as-cultural-heritage-of-humanity"]],
+text:"Almost every student in Viet Nam has played tug of war at school, but few know that this simple game is also part of the world's cultural heritage. In December 2015, at a meeting in Windhoek, Namibia, UNESCO added “tugging rituals and games” to its Representative List of the Intangible Cultural Heritage of Humanity. What made this recognition special was that the nomination was not prepared by one country alone. Cambodia, the Philippines, the Republic of Korea and Viet Nam worked on it together, and for Viet Nam it was the first time the country had submitted a heritage nomination jointly with other nations. In all four countries, tugging is closely connected with rice-farming communities. It is often held at the start of a new farming season, and people believe that it can bring good harvests and prosperity. In Viet Nam, the game, known as kéo co, is mainly practised in the northern midlands, the Red River Delta and the north-central region, usually as part of spring festivals. Apart from its spiritual meaning, tugging also has an important social role. Because no team can win unless all its members pull at the same time, the game promotes solidarity and teaches people that cooperation is more powerful than individual strength.",
+gl:[["heritage","di sản"],["intangible","phi vật thể"],["nomination","hồ sơ đề cử"],["jointly","cùng nhau, chung"],["harvest","mùa màng, vụ thu hoạch"],["prosperity","sự thịnh vượng"],["solidarity","sự đoàn kết"]],
+q:[["What is the main idea of the passage?",["Tug of war has cultural value and international recognition.","Tug of war is the most popular sport in Asia.","Rice farming is difficult in Southeast Asia.","UNESCO meetings are held every year in Namibia."],"Bài nói về giá trị văn hóa của kéo co và việc được UNESCO công nhận."],
+["Where did UNESCO make the decision in 2015?",["In Windhoek, Namibia","In Ha Noi, Viet Nam","In Seoul, Korea","In Manila, the Philippines"],"“at a meeting in Windhoek, Namibia”."],
+["What was special about the nomination?",["Four countries prepared it together.","It was prepared by students.","It was Viet Nam's first heritage of any kind.","It was rejected the first time."],"Hồ sơ do bốn nước cùng chuẩn bị."],
+["The word “solidarity” is closest in meaning to…",["unity","strength","competition","festival"],"solidarity = sự đoàn kết (unity)."],
+["According to the passage, kéo co in Viet Nam is usually played…",["as part of spring festivals","only in schools","at the end of the harvest","in the Mekong Delta"],"“usually as part of spring festivals”."]]},
+
+{u:4,t:"Young Volunteers Across ASEAN",
+src:[["ASEAN Secretariat – Youth volunteering in ASEAN","https://asean.org/?p=20453"],["UKM – ASEAN Youth Volunteer Programme (AYVP)","https://www.ukm.my/i-kom/?p=4668"],["USAID – AYVP fact sheet (2016)","https://2012-2017.usaid.gov/sites/default/files/documents/1861/AYVP_Feb%202016.pdf"],["UKM News – AYVP 2021","https://ukm.my/news/?p=21791"]],
+text:"Volunteering is one of the ways in which young people help to build a stronger ASEAN Community. A good example is the ASEAN Youth Volunteer Programme, or AYVP. The idea for the programme was first proposed at a meeting of ASEAN youth officials held in Ha Noi in October 2011, and it was endorsed by ASEAN youth ministers in 2013. The programme is run by the National University of Malaysia (Universiti Kebangsaan Malaysia) under the guidance of Malaysia's Ministry of Youth and Sports, and for several years it also received support from the United States Agency for International Development. Each year, AYVP brings together young people from different member states to work on community projects. Volunteers spend time with local people, looking for practical solutions to social, cultural, economic and environmental problems. Over the years, the programme has focused on many different themes, including climate change, cultural heritage, disaster risk reduction and poverty eradication. During the COVID-19 pandemic, it even moved online, and the 2021 programme brought together 300 young people in a fully virtual format. The organisers hope that such experiences will help future ASEAN leaders sharpen their skills. Working side by side with friends from neighbouring countries can also help volunteers break down stereotypes and develop a stronger sense of ASEAN identity.",
+gl:[["volunteer","tình nguyện viên"],["propose","đề xuất"],["endorse","phê duyệt, tán thành"],["community project","dự án cộng đồng"],["eradication","sự xóa bỏ"],["virtual","trực tuyến, ảo"],["stereotype","định kiến"]],
+q:[["Where was the idea for AYVP first proposed?",["In Ha Noi","In Kuala Lumpur","In Bangkok","In Jakarta"],"“at a meeting … held in Ha Noi in October 2011”."],
+["Which organisation runs the programme?",["A university in Malaysia","The government of Viet Nam","UNESCO","A private company"],"Universiti Kebangsaan Malaysia điều hành chương trình."],
+["Which theme is NOT mentioned in the passage?",["sports competitions","climate change","cultural heritage","poverty eradication"],"Bài không nhắc đến thi đấu thể thao."],
+["The word “endorsed” is closest in meaning to…",["officially approved","completely forgotten","strongly criticised","quickly changed"],"endorse = phê duyệt, tán thành."],
+["Why did the 2021 programme take place online?",["Because of the COVID-19 pandemic","Because there were not enough volunteers","Because it was cheaper","Because Malaysia left ASEAN"],"“During the COVID-19 pandemic, it even moved online”."]]},
+
+{u:5,t:"What Is the Greenhouse Effect?",
+src:[["NASA Climate Kids – What Is the Greenhouse Effect?","https://climatekids.nasa.gov/greenhouse-effect"],["NASA Climate Kids – Greenhouse Effect: Keeping the Balance","https://climatekids.nasa.gov/greenhouse-effect-and-carbon-cycle"],["NASA Science – What is the greenhouse effect? (kids)","https://science.nasa.gov/kids/earth/what-is-the-greenhouse-effect"]],
+text:"A greenhouse is a building with glass walls and a glass roof. Gardeners use it to grow plants such as tomatoes and flowers, even in cold weather. During the day, sunlight passes through the glass and warms the air and the plants inside. The glass then traps much of that heat, so the greenhouse stays warm even at night. Our planet works in a similar way. Earth's atmosphere acts like the glass of a greenhouse: it lets sunlight in, but some gases in the air prevent part of the heat from escaping back into space. This natural process is called the greenhouse effect, and the gases responsible for it are known as greenhouse gases. Besides carbon dioxide (CO2), they include water vapour, methane, nitrous oxide and ozone. Without them, Earth would be a frozen, lifeless place. The problem is that human activities, especially burning fossil fuels such as coal, oil and gas, are adding more and more greenhouse gases to the atmosphere. As a result, the greenhouse effect is becoming stronger and the planet is getting warmer. Fortunately, nature has some ways of removing these gases: plants, soil and oceans can all absorb carbon dioxide. To understand these changes better, NASA uses satellites to measure the gases in our atmosphere from space.",
+gl:[["greenhouse","nhà kính"],["trap","giữ lại"],["atmosphere","khí quyển"],["escape","thoát ra"],["water vapour","hơi nước"],["fossil fuels","nhiên liệu hóa thạch"],["absorb","hấp thụ"],["satellite","vệ tinh"]],
+q:[["Why does the writer describe a greenhouse at the beginning?",["To explain how the atmosphere keeps Earth warm","To teach readers how to grow tomatoes","To compare the prices of buildings","To show that glass is dangerous"],"Nhà kính là phép so sánh để giải thích hiệu ứng nhà kính."],
+["Which of the following is NOT listed as a greenhouse gas?",["oxygen","methane","ozone","water vapour"],"Bài không nhắc đến oxygen."],
+["According to the passage, without greenhouse gases Earth would be…",["frozen and lifeless","much warmer","full of plants","the same as today"],"“Without them, Earth would be a frozen, lifeless place.”"],
+["The word “it” in “it lets sunlight in” refers to…",["Earth's atmosphere","the greenhouse","the sunlight","the heat"],"it = Earth's atmosphere."],
+["What can remove carbon dioxide from the air, according to the passage?",["Plants, soil and oceans","Satellites","Fossil fuels","Greenhouses"],"“plants, soil and oceans can all absorb carbon dioxide”."]]},
+
+{u:5,t:"Salt Water in Viet Nam's Rice Bowl",
+src:[["VOA Learning English – Climate Change, Dams Threaten Vietnam Rice Industry","https://learningenglish.voanews.com/a/climate-change-and-dams-threaten-vietnam-rice-industry/3587618.html"],["VOA Learning English – Climate Change Pushes Vietnam's Rice Growers to Farm Shrimp","https://learningenglish.voanews.com/a/climate-change-pushes-vietnam-s-rice-growers-to-farm-shrimp/5881038.html"],["VOA – Rising salinity threatens rice crops on Southeast Asia's sinking coast","https://voanews.com/a/rising-salinity-threatens-rice-crops-on-southeast-asia-s-sinking-coast-/6729518.html"],["VOA Learning English – In Vietnam, People Leave Mekong Delta to Find Jobs in City","https://learningenglish.voanews.com/a/in-vietnam-people-leave-mekong-delta-to-find-jobs-in-city/7537485.html"]],
+text:"The Mekong River begins in Tibet and flows through six countries – China, Myanmar, Laos, Thailand, Cambodia and Viet Nam – before reaching the sea. Near its mouth lies the Mekong Delta, which, according to VOA, is home to about 18 million people and grows more than half of Viet Nam's rice. However, this fertile region is now considered one of the areas most at risk from climate change. One of the biggest concerns is saltwater intrusion. As sea levels rise, seawater moves further up the rivers and into the fields. A Vietnamese hydrologist told VOA that salt water can now reach areas more than 100 kilometres from the coast. Climate change is not the only cause, however. Pumping too much groundwater, building dams for hydropower and mining sand from riverbeds are also making the land sink, which allows the sea to move inland more easily. For farmers, the effects are serious. A farmer in Long An province explained that with fresh water his family can grow rice all year round, but without it nothing will grow. Faced with these changes, some families have stopped growing rice and started raising shrimp, which can live in salty water. Local governments support them with training and loans, while many young people are leaving the delta to look for work in Ho Chi Minh City.",
+gl:[["fertile","màu mỡ"],["at risk","có nguy cơ"],["saltwater intrusion","xâm nhập mặn"],["hydrologist","nhà thủy văn học"],["groundwater","nước ngầm"],["hydropower","thủy điện"],["sink","lún, chìm"],["loan","khoản vay"]],
+q:[["What is the passage mainly about?",["Threats to farming in the Mekong Delta","The history of the Mekong River","How to cook shrimp","Tourism in Ho Chi Minh City"],"Bài nói về các mối đe dọa với nông nghiệp ở ĐBSCL."],
+["How many countries does the Mekong River flow through?",["six","five","seven","four"],"China, Myanmar, Laos, Thailand, Cambodia, Viet Nam = 6."],
+["Which is NOT mentioned as a cause of the sinking land?",["building new highways","pumping groundwater","building dams","mining sand"],"Bài không nhắc đến xây đường cao tốc."],
+["The word “intrusion” is closest in meaning to…",["moving into a place where it is not wanted","becoming cleaner","flowing back to the sea","disappearing completely"],"intrusion = sự xâm nhập (không mong muốn)."],
+["Why have some families started raising shrimp?",["Shrimp can live in salty water.","Shrimp need less land than rice.","The government banned rice farming.","Shrimp are easier to export to Tibet."],"“raising shrimp, which can live in salty water”."]]},
+
+{u:5,t:"Small Actions, Big Difference",
+src:[["United Nations – ActNow campaign","https://www.un.org/en/actnow"],["UN Viet Nam – ActNow: ten actions","https://vietnam.un.org/en/node/174469"],["UN Indonesia – How your actions reduce your carbon footprint","https://indonesia.un.org/en/node/240657"],["UNRIC – ActNow app","https://unric.org/en/actnow-campaign-mobile-app/"],["UNEP – 16 ways to take action on climate","https://www.unep.org/news-and-stories/story/16-ways-take-action-climate"]],
+text:"When people hear about climate change, many feel that the problem is too big for them to solve. However, the United Nations believes that individuals have an important role to play. Its campaign, ActNow, encourages ordinary people to take simple, everyday actions for the planet. The campaign suggests ten actions. People are asked to save energy at home, walk, cycle or take public transport, eat more vegetables, throw away less food, and reduce, reuse, repair and recycle the things they buy. These actions matter because much of our electricity and heat still comes from coal, oil and gas, and because products cause emissions at every stage, from the extraction of raw materials to manufacturing and transport. Some changes can have a substantial impact. According to the UN, switching a home to renewable energy such as wind or solar power can cut a person's carbon footprint by up to 1.5 tonnes of CO2 a year, while taking one less long-haul return flight can save almost 2 tonnes. The campaign also offers a mobile app in which users can record their actions; by the end of 2022, more than 10 million actions had been logged worldwide. Finally, the UN reminds people to speak up. Organisers of a related campaign, Count Us In, estimate that if one billion people took practical action, global carbon emissions could fall by as much as 20 per cent.",
+gl:[["individual","cá nhân"],["public transport","phương tiện công cộng"],["extraction","sự khai thác"],["raw materials","nguyên liệu thô"],["substantial","đáng kể"],["carbon footprint","dấu chân carbon"],["long-haul flight","chuyến bay đường dài"],["log","ghi lại"]],
+q:[["What is the main purpose of the ActNow campaign?",["To encourage individuals to take everyday climate actions","To sell electric cars","To stop people from travelling","To build new power stations"],"ActNow khuyến khích mỗi cá nhân hành động hằng ngày."],
+["According to the passage, which action can save almost 2 tonnes of CO2?",["Taking one less long-haul return flight","Eating more vegetables","Recycling plastic bottles","Downloading the app"],"“taking one less long-haul return flight can save almost 2 tonnes”."],
+["The word “substantial” is closest in meaning to…",["considerable","tiny","unknown","harmful"],"substantial = đáng kể (considerable)."],
+["Why do the products we buy cause emissions?",["Emissions are produced at every stage of production and transport.","They are always made from plastic.","They are too expensive.","They are only sold online."],"“products cause emissions at every stage, from the extraction of raw materials to manufacturing and transport”."],
+["How many actions had been logged by the end of 2022?",["More than 10 million","About 1.5 million","Exactly 1 billion","20 per cent"],"“more than 10 million actions had been logged worldwide”."]]}
+];
+let ri=0;
+const wc=s=>s.split(/\s+/).length;
+function rdList(){const u=$("#rFil").value;$("#rList").innerHTML=RD.map((r,i)=>({r,i})).filter(x=>u==="all"||x.r.u==u).map(({r,i})=>{const d=store.get("rd2_"+i,null);
+ return `<button class="rcard ${i===ri?"on":""}" data-ri="${i}">${uPill(r.u)} <span class="small muted">${wc(r.text)} từ · ${r.q.length} câu hỏi</span><b>${esc(r.t)}</b>${d!=null?`<span class="small ok-t">Đã làm: ${esc(d)}</span>`:""}</button>`}).join("")}
+function rdShow(i){ri=i;rdList();const r=RD[i];const w=wc(r.text);
+ const qs=r.q.map(q=>{const o=shuf(q[1]);return{q:q[0],o,a:o.indexOf(q[1][0]),e:q[2]}});
+ $("#rBody").innerHTML=`<article class="card exam">
+ <div class="row">${uPill(r.u)}<span class="muted small">Reading · ${w} words · khoảng ${Math.max(2,Math.round(w/110))} phút đọc</span></div>
+ <p class="instr">Read the following passage and choose the correct answer (A, B, C or D) to each of the questions.</p>
+ <h2 class="ptitle">${esc(r.t)}</h2>
+ <div class="ptext">${esc(r.text)}</div>
+ <p class="small muted srcline">Adapted from: ${r.src.map(s=>`<a href="${esc(s[1])}" target="_blank" rel="noopener">${esc(s[0])}</a>`).join(" · ")}</p>
+ <div class="row"><button class="btn" id="rPlay">Nghe cả bài</button><button class="btn g" id="rStop">Dừng</button></div>
+ <ol class="eq" id="rQ">${qs.map((q,k)=>`<li data-k="${k}"><p class="qq">${esc(q.q)}</p><div class="eo">${q.o.map((o,j)=>`<button class="opt eopt" data-j="${j}"><b>${"ABCD"[j]}.</b> ${esc(o)}</button>`).join("")}</div><div class="small gqf"></div></li>`).join("")}</ol>
+ <div class="row"><button class="btn o" id="rCheck">Nộp bài & chấm điểm</button><button class="btn g" id="rReset">Làm lại</button><span class="meter" id="rScore"></span></div>
+ <details class="glbox" id="rGl"><summary>Từ vựng trong bài (${r.gl.length})</summary><div class="chips" style="margin-top:10px">${r.gl.map(g=>`<button class="chip" data-say="${esc(g[0])}">${esc(g[0])} – ${esc(g[1])}</button>`).join("")}</div></details>
+ <div class="row" style="justify-content:space-between;margin-top:18px"><button class="btn g" id="rPrev" ${i===0?"hidden":""}>← Bài trước</button><button class="btn" id="rNext" ${i===RD.length-1?"hidden":""}>Bài tiếp →</button></div>
+ </article>`;
+ const sel={};let done=false;
+ $("#rPlay").onclick=()=>say(r.text);$("#rStop").onclick=()=>{try{synth&&synth.cancel()}catch(e){}};
+ $("#rQ").onclick=e=>{const b=e.target.closest(".eopt");if(!b||done)return;const li=b.closest("li");li.querySelectorAll(".eopt").forEach(x=>x.classList.toggle("sel",x===b));sel[li.dataset.k]=+b.dataset.j};
+ $("#rCheck").onclick=()=>{if(done)return;done=true;let c=0;
+  $$("#rQ li").forEach(li=>{const k=+li.dataset.k,q=qs[k],v=sel[k];if(v===q.a)c++;li.querySelectorAll(".eopt").forEach(x=>{x.classList.remove("sel");const j=+x.dataset.j;if(j===q.a)x.classList.add("ok");else if(j===v)x.classList.add("bad")});
+   li.querySelector(".gqf").innerHTML=(v===q.a?'<span class="ok-t">Đúng.</span> ':v==null?'<span class="bad-t">Chưa chọn.</span> ':'<span class="bad-t">Sai.</span> ')+esc(q.e)});
+  $("#rScore").textContent=`${c}/${qs.length}`;store.set("rd2_"+i,`${c}/${qs.length}`);rdList();$("#rGl").open=true};
+ $("#rReset").onclick=()=>rdShow(i);
+ $("#rPrev").onclick=()=>{rdShow(i-1);$("#v-read").scrollIntoView({block:"start"})};$("#rNext").onclick=()=>{rdShow(i+1);$("#v-read").scrollIntoView({block:"start"})};
+}
+$("#rFil").onchange=rdList;$("#rList").onclick=e=>{const b=e.target.closest("[data-ri]");if(b){rdShow(+b.dataset.ri);if(innerWidth<=860)$("#rBody").scrollIntoView({block:"start"})}};
+rdShow(0);
+
+/* ================= GAMES ================= */
+$("#gtabs").onclick=e=>{const b=e.target.closest("button");if(!b)return;$$("#gtabs button").forEach(x=>x.classList.toggle("on",x===b));$$(".game").forEach(g=>g.classList.toggle("on",g.id==="g-"+b.dataset.g))};
+// Memory
+let mOpen=[],mMoves=0,mDone=0,mT0=0,mTimer=null,mRound=0;
+function memNew(){const set=$("#memSet").value;let pool=set==="id"?ID.map(i=>[i[0],i[1]]):set==="v"?V.map(v=>[v[0],v[1]]):[...ID.map(i=>[i[0],i[1]]),...V.map(v=>[v[0],v[1]])];
+ const pick=shuf(pool).slice(0,6);const cards=shuf(pick.flatMap((p,i)=>[{id:i,t:p[0]},{id:i,t:p[1]}]));
+ $("#mem").innerHTML=cards.map((c,k)=>`<button class="mc" data-id="${c.id}" data-k="${k}" data-t="${esc(c.t)}" aria-label="Thẻ ${k+1}">?</button>`).join("");
+ mRound++;mOpen=[];mMoves=0;mDone=0;mT0=Date.now();clearInterval(mTimer);mTimer=setInterval(memInfo,1000);memInfo()}
+function memInfo(){const s=Math.round((Date.now()-mT0)/1000);$("#memInfo").textContent=`Lượt lật: ${mMoves} · Thời gian: ${s}s · Đã ghép: ${mDone}/6`+(store.get("membest",0)?` · Kỷ lục: ${store.get("membest")} lượt`:"")}
+$("#mem").onclick=e=>{const c=e.target.closest(".mc");if(!c||c.classList.contains("up")||c.classList.contains("done")||mOpen.length===2)return;
+ c.classList.add("up");c.textContent=c.dataset.t;mOpen.push(c);
+ if(mOpen.length===2){mMoves++;const[a,b]=mOpen;const rd=mRound;
+  if(a.dataset.id===b.dataset.id){setTimeout(()=>{if(rd!==mRound)return;a.className=b.className="mc done";mOpen=[];mDone++;memInfo();
+   if(mDone===6){clearInterval(mTimer);const best=store.get("membest",0);if(!best||mMoves<best)store.set("membest",mMoves);$("#memInfo").innerHTML=`<span class="ok-t">Hoàn thành với ${mMoves} lượt!</span> Bấm “Ván mới” để chơi tiếp.`}},250)}
+  else setTimeout(()=>{if(rd!==mRound)return;[a,b].forEach(x=>{x.classList.add("no");x.classList.remove("up");x.textContent="?"});setTimeout(()=>[a,b].forEach(x=>x.classList.remove("no")),360);mOpen=[];memInfo()},800)}};
+$("#memNew").onclick=memNew;$("#memSet").onchange=memNew;memNew();
+// Verb race
+const VPOOL=[...GER.map(p=>[p,"ing"]),...GER_X.map(p=>[p,"ing"]),...INF.map(p=>[p,"to"]),...INF_X.map(p=>[p,"to"]),...V0.map(p=>[p,"v0"]),...V0.map(p=>[p,"v0"])];
+let vOn=false,vT=45,vSc=0,vStreak=0,vCur=null,vInt=null,vLock=false;
+function vNext(){vCur=VPOOL[Math.random()*VPOOL.length|0];$("#vWord").textContent=vCur[0]+" ___";$$("#vBtns .opt").forEach(b=>b.className="opt");vLock=false}
+function vEnd(){vOn=false;clearInterval(vInt);const best=store.get("vbest",0);if(vSc>best)store.set("vbest",vSc);$("#vWord").textContent=`Hết giờ! ${vSc} điểm`;$("#vMsg").innerHTML=vSc>best?'<span class="ok-t">Kỷ lục mới!</span>':`Kỷ lục của bạn: ${Math.max(best,vSc)} điểm`;$("#vStart").textContent="Chơi lại"}
+$("#vStart").onclick=()=>{vOn=true;vT=45;vSc=0;vStreak=0;$("#vScore").textContent="0 điểm";$("#vTime").textContent="45s";$("#vBar").style.width="100%";$("#vMsg").textContent="Đúng liên tiếp được cộng thêm điểm thưởng. Phím tắt: 1, 2, 3.";vNext();clearInterval(vInt);
+ vInt=setInterval(()=>{vT--;$("#vTime").textContent=vT+"s";$("#vBar").style.width=(vT/45*100)+"%";if(vT<=0)vEnd()},1000)};
+function vAns(a){if(!vOn||vLock)return;vLock=true;const b=$(`#vBtns [data-a="${a}"]`);const right=a===vCur[1];
+ if(right){vStreak++;vSc+=1+(vStreak>=3?1:0);b.classList.add("ok")}else{vStreak=0;b.classList.add("bad");$(`#vBtns [data-a="${vCur[1]}"]`).classList.add("ok")}
+ $("#vScore").textContent=vSc+" điểm";$("#vMsg").textContent=right?(vStreak>=3?`Chuỗi ${vStreak} câu đúng – điểm thưởng!`:"Chính xác!"):`Sai rồi: “${vCur[0]}” đi với ${vCur[1]==="ing"?"V-ing":vCur[1]==="to"?"to V":"V0"}.`;
+ setTimeout(()=>{if(vOn)vNext()},right?350:1100)}
+$("#vBtns").onclick=e=>{const b=e.target.closest(".opt");if(b)vAns(b.dataset.a)};
+document.addEventListener("keydown",e=>{if(!vOn||!$("#v-games").classList.contains("on")||!$("#g-verb").classList.contains("on"))return;const m={"1":"ing","2":"to","3":"v0"}[e.key];if(m)vAns(m)});
+// Scramble
+let sCur=null,sOk=0,sAll=0,sHelpN=0,sOrder=shuf(SCR),sIdx=0,sLock=false;
+function sNew(){sLock=false;sCur=sOrder[sIdx++%sOrder.length];sHelpN=0;let s;do{s=shuf(sCur[0].split("")).join("")}while(s===sCur[0]);
+ $("#sLet").innerHTML=s.split("").map(c=>`<span>${esc(c)}</span>`).join("");$("#sHint").innerHTML=`Nghĩa: <b>${esc(sCur[1])}</b> · ${sCur[0].length} chữ cái`;$("#sIn").value="";$("#sFb").hidden=true}
+$("#sForm").onsubmit=e=>{e.preventDefault();if(sLock)return;const v=$("#sIn").value.trim().toLowerCase();if(!v)return;const fb=$("#sFb");fb.hidden=false;
+ if(v===sCur[0]){sLock=true;sOk++;sAll++;fb.innerHTML=`<span class="ok-t">Chính xác: ${esc(sCur[0])}</span> ${spkBtn(sCur[0])}`;say(sCur[0]);setTimeout(sNew,1400)}
+ else fb.innerHTML=`<span class="bad-t">Chưa đúng</span> – thử lại hoặc bấm Gợi ý.`;$("#sScore").textContent=`${sOk} / ${sAll} từ`};
+$("#sHelp").onclick=()=>{if(sLock)return;sHelpN=Math.min(sHelpN+1,sCur[0].length-1);$("#sFb").hidden=false;$("#sFb").innerHTML=`Bắt đầu bằng: <b>${esc(sCur[0].slice(0,sHelpN))}…</b>`};
+$("#sSkip").onclick=()=>{if(sLock)return;sLock=true;$("#sFb").hidden=false;$("#sFb").innerHTML=`Đáp án: <b>${esc(sCur[0])}</b> ${spkBtn(sCur[0])}`;sAll++;$("#sScore").textContent=`${sOk} / ${sAll} từ`;setTimeout(sNew,1400)};
+sNew();
+
+/* ================= TEST ================= */
+let T=null,tInt=null;
+function tBest(){const b=store.get("best",null);$("#tBest").textContent=b==null?"Chưa có điểm. Cố lên!":`Điểm cao nhất của bạn: ${b}%`}
+$("#tGo").onclick=()=>{const u=$("#tUnit").value,n=+$("#tNum").value,mode=$("#tMode").value;
+ const pool=shuf(QB.filter(q=>u==="all"||q[0]==u)).slice(0,n).map(q=>{const o=shuf(q[3]);return{u:q[0],tp:q[1],q:q[2],o,a:o.indexOf(q[3][0]),e:q[4]}});
+ T={qs:pool,i:0,ans:[],mode,t0:Date.now()};$("#tSetup").hidden=true;$("#tEnd").hidden=true;$("#tRun").hidden=false;
+ clearInterval(tInt);$("#tClock").textContent="";if(mode==="e"){tInt=setInterval(()=>{const s=Math.round((Date.now()-T.t0)/1000);$("#tClock").textContent=`${Math.floor(s/60)}:${String(s%60).padStart(2,"0")}`},1000)}
+ tShow()};
+function tShow(){const q=T.qs[T.i];$("#tTag").textContent=`Unit ${q.u} · ${q.tp}`;$("#tTag").className="pill"+(q.u==5?" u5":"");$("#tPos").textContent=`Câu ${T.i+1}/${T.qs.length}`;
+ $("#tBar").style.width=(T.i/T.qs.length*100)+"%";$("#tQ").textContent=q.q;$("#tFb").hidden=true;$("#tNext").hidden=true;
+ $("#tOpts").innerHTML=q.o.map((o,k)=>`<button class="opt" data-k="${k}"><b>${"ABCD"[k]}.</b> ${esc(o)}</button>`).join("")}
+$("#tOpts").onclick=e=>{const b=e.target.closest(".opt");if(!b||T.ans[T.i]!=null)return;const k=+b.dataset.k,q=T.qs[T.i];T.ans[T.i]=k;
+ if(T.mode==="p"){$$("#tOpts .opt").forEach((x,j)=>{if(j===q.a)x.classList.add("ok");else if(j===k)x.classList.add("bad")});
+  $("#tFb").hidden=false;$("#tFb").innerHTML=(k===q.a?'<span class="ok-t">Đúng rồi!</span> ':'<span class="bad-t">Chưa đúng.</span> ')+esc(q.e);$("#tNext").hidden=false;$("#tNext").textContent=T.i===T.qs.length-1?"Xem kết quả":"Câu tiếp";$("#tNext").focus()}
+ else{b.classList.add("sel");setTimeout(tAdvance,350)}};
+function tAdvance(){if(T.ans[T.i]==null)return;if(T.i<T.qs.length-1){T.i++;tShow()}else tFinish()}
+$("#tNext").onclick=tAdvance;
+$("#tQuit").onclick=()=>{clearInterval(tInt);$("#tRun").hidden=true;$("#tSetup").hidden=false;tBest()};
+function tFinish(){clearInterval(tInt);const n=T.qs.length,c=T.qs.filter((q,i)=>T.ans[i]===q.a).length,p=Math.round(c/n*100);const s=Math.round((Date.now()-T.t0)/1000);
+ const best=store.get("best",null);if(best==null||p>best)store.set("best",p);
+ const by={};T.qs.forEach((q,i)=>{by[q.tp]=by[q.tp]||[0,0];by[q.tp][1]++;if(T.ans[i]===q.a)by[q.tp][0]++});
+ const wrong=T.qs.map((q,i)=>({q,i})).filter(x=>T.ans[x.i]!==x.q.a);
+ $("#tRun").hidden=true;$("#tEnd").hidden=false;
+ $("#tEnd").innerHTML=`<div class="row" style="gap:24px;align-items:flex-end"><div><div class="score">${c}/${n}</div><div class="muted">${p}% · ${Math.floor(s/60)} phút ${s%60} giây</div></div><div style="flex:1"><h2 style="margin:0">${p>=90?"Xuất sắc! Bạn đã sẵn sàng đi thi.":p>=70?"Khá lắm! Ôn thêm vài phần nữa là chắc.":p>=50?"Tạm ổn – xem lại các câu sai bên dưới.":"Cần ôn thêm – quay lại mục Học bài nhé."}</h2>${best!=null&&p>best?'<span class="ok-t">Điểm cao nhất mới!</span>':""}</div></div>
+ <h3 style="margin-top:22px">Kết quả theo dạng bài</h3><div class="list">${Object.entries(by).map(([k,v])=>`<div><div class="row" style="justify-content:space-between"><span>${esc(k)}</span><b>${v[0]}/${v[1]}</b></div><div class="bar"><i style="width:${v[0]/v[1]*100}%"></i></div></div>`).join("")}</div>
+ <h3 style="margin-top:22px">${wrong.length?`Xem lại ${wrong.length} câu sai`:"Bạn không sai câu nào!"}</h3>
+ ${wrong.map(({q,i})=>`<div class="rv"><b>${esc(q.q)}</b><br>Bạn chọn: <span class="bad-t">${esc(q.o[T.ans[i]])}</span> · Đáp án: <span class="ok-t">${esc(q.o[q.a])}</span><br><span class="small muted">${esc(q.e)}</span></div>`).join("")}
+ <div class="row" style="margin-top:18px"><button class="btn o" id="tAgain">Làm đề mới</button><a class="btn g" href="#learn">Ôn lại bài</a></div>`;
+ $("#tAgain").onclick=()=>{$("#tEnd").hidden=true;$("#tSetup").hidden=false;tBest()}}
+tBest();
+
+/* ================= SPEAK ================= */
+const SP={
+words:()=>{const seen=new Set(V.map(v=>v[0].toLowerCase()));return V.map(v=>[v[0],v[1],v[3]]).concat(SCR.filter(x=>!seen.has(x[0])).map(x=>[x[0],x[1],0]))},
+idioms:()=>ID.map(i=>[i[3],i[0]+" — "+i[1],i[4]]),
+sent:()=>SENT.map(s=>[s[0],s[1],s[2]]),
+pres:()=>PRES_SAMPLE.map((s,i)=>[s,"Đoạn "+(i+1),4])
+};
+function speak(s){$$("#stabs button").forEach(b=>b.classList.toggle("on",b.dataset.s===s));const items=SP[s]();
+ $("#sbody").innerHTML=(s==="pres"?`<div class="card" style="margin-bottom:14px"><h3>Bài thuyết trình mẫu: ASEAN Youth Green Club</h3><p class="muted small">Đây là một câu lạc bộ giả định để luyện các mẫu câu trong đề cương. Hãy đọc từng đoạn, rồi tự thay bằng tổ chức thật mà nhóm bạn chọn.</p><button class="btn" id="playAll">Nghe cả bài</button></div>`:"")+
+ `<div class="list">${items.map((it,k)=>`<div class="li"><div class="t">${it[2]?uPill(it[2])+" ":""}<b style="font-size:17px">${esc(it[0])}</b><br><span class="muted small">${esc(it[1])}</span><div class="small" id="sr${k}" style="margin-top:6px"></div></div>${spkBtn(it[0])}<button class="spk" data-mic="${k}" aria-label="Nói thử" title="Nói thử" style="background:var(--blue);color:#fff"><svg><use href="#i-mic"/></svg></button></div>`).join("")}</div>`;
+ $("#sbody").onclick=e=>{const m=e.target.closest("[data-mic]");if(m){const k=+m.dataset.mic;listen(items[k][0],$("#sr"+k))}};
+ const pa=$("#playAll");if(pa)pa.onclick=()=>say(PRES_SAMPLE.join(" "))}
+$("#stabs").onclick=e=>{const b=e.target.closest("button");if(b)speak(b.dataset.s)};
+
+learn("cards");speak("words");route();
+}
+</script>
+</body>
+</html>
